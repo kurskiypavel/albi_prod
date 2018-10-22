@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styleApp.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+
+    <!-- FONTS IMPORT -->
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'wkb3jgo',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {
+                }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+
+</head>
+
+<body style='background: #fff;'>
+    <div class="header">
+        <div class="searchBar">
+            <div class="input">
+
+                <input type="text" placeholder="Search videos...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <ul class='videoLists'>
+            <li>New Videos</li>
+            <li>All Videos</li>
+        </ul>
+    </div>
+
+    <div class="videos videoPage">
+        <div class="video">
+            <div class="headerVideo" style='background-image: url(assets/images/App/head-video1.png);'>
+                <i id='faPlay' class="fas fa-play"></i>
+            </div>
+            <div class="nav">
+                <i class="fas prev fa-angle-left"></i>
+                <div class="heartWrap">
+                    <i class="far like fa-heart"></i>
+                </div>
+                <i class="fas next fa-angle-right"></i>
+            </div>
+            <div class="body">
+
+                <div class="description">
+                    <h3><span>Power Yoga:</span> Arm strength postures</h3>
+                    <p>Episode 2 Season 1</p>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <p>Level: </p>
+                                <p>Beginner</p>
+                            </li>
+                            <li>
+                                <p>Duration:</p>
+                                <p> 9:12</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>From balancing poses to backbends, these yoga poses stretch and
+                        strengthen the arms, giving you the power you need for
+                        poses like Chaturanga Dandasana and Handstand.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footerBar">
+                <ul>
+                    <li>
+                        <a href="programs.html">
+                            <i class="fas fa-table"></i>
+                            <p>Programs</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="videos.html">
+                            <i class="fas fa-video"></i>
+                            <p>Videos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="far fa-calendar-alt"></i>
+                        <p>My events</p>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <p>My profile</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        <div class="playingVideo">
+            <div class="videoNav">
+                <h3><span>Power Yoga:</span> Arm strength postures</h3>
+                <ul>
+                    <li>
+                        <p class="pause">||</p>
+                        <i class="fas fa-play"></i>
+                    </li>
+                    <li>
+                        <p id="demo" class="time">00:13:23</p>
+                    </li>
+                    <li><img src="assets/images/App/volume-muted.svg" alt=""> </li>
+                </ul>
+            </div>
+
+            <div class="videoNavEnd">
+                <h3>Next: <span>Power Yoga:</span> Arm strength postures</h3>
+                <div class="nav">
+                    <i class="fas prev fa-angle-left"></i>
+                    <div class="heartWrap">
+                        <i class="fas play fa-play"></i>
+                    </div>
+                    <i class="fas next fa-angle-right"></i>
+                </div>
+            </div>
+
+            <video id="myVideo">
+                <source id="mp4_src" src="/assets/video/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script>
+        // start play video 1st time from 0
+        $('#faPlay').click(function () {
+            $('.playingVideo').css('display', 'block');
+            // drop current time if paused
+            document.getElementById("myVideo").currentTime = 0;
+            playVid();
+            $('body').css('overflow','hidden');
+        });
+
+        // on video end show videoEnd view
+        var video = document.getElementById("myVideo");
+        video.onended = function () {
+            $('.videoNavEnd').css('display', 'block');
+        };
+        //  play video from videoEnd view
+        $('.fa-play').click(function () {
+            playVid();
+            $('.videoNavEnd').css('display', 'none');
+        });
+
+
+        // pause video
+        // pauseVid();
+        $('.pause').click(function () {
+            pauseVid();
+            $('.videoNavEnd').css('display', 'block');
+        });
+
+        // timer of player BEGIN
+        // https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_event_timeupdate
+
+        // Get the video element with id="myVideo"
+
+        // Assign an ontimeupdate event to the video element, and execute a function if the current playback position has changed
+        video.ontimeupdate = function () {
+            timeFormatter()
+        };
+
+        function timeFormatter() {
+            var s = parseInt(video.currentTime % 60);
+            var m = parseInt((video.currentTime / 60) % 60);
+            m = (m >= 10) ? m : "0" + m;
+            s = (s >= 10) ? s : "0" + s;
+            // Display the current position of the video in a p element with id="demo"
+            document.getElementById("demo").innerHTML = '00:' + m + ':' + s;
+        }
+        // timer of player END
+
+
+        // play video essential functionality
+        var x = document.getElementById("myVideo");
+
+        function playVid() {
+            x.play();
+        }
+
+        function pauseVid() {
+            x.pause();
+        }
+
+
+
+        //hide video form whe clicked outside
+        $(document).bind("mouseup touchend", function (e) {
+            var container = $(".videoNavEnd");
+            var player = $(".playingVideo");
+            // if the target of the click isn't the container nor a descendant of the container
+            if (container.is(e.target) && container.has(e.target).length === 0) {
+                player.hide();
+                $('body').css('overflow-x','hidden');
+                $('body').css('overflow-y','unset');
+            }            
+        });
+    </script>
+
+</body>
+
+</html>
