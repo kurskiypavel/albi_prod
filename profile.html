@@ -70,7 +70,7 @@
                                 <p>17 Lessons Competed</p>
                             </li> -->
                     <li>
-                        <p><span class="bold">6</span> Favorites</p>
+                        <!-- <p><span class="bold">6</span> Favorites</p> -->
                     </li>
                     <li>
                         <p>Member Since <span class="bold">8 Months Ago</span></p>
@@ -82,29 +82,30 @@
                 <ul>
                     <li>
                         <p><span class="bold">Gender: </span>female</p>
+                        <p class="hide" style="display: none;"><span class="bold">Gender: </span>—</p>
                     </li>
                     <li>
-                        <p><span class="bold">Birthdate: </span>11/11/2011</p>
+                        <p><span class="bold">Birthdate: </span>2011-11-11</p>
+                        <p class="hide" style="display: none;"><span class="bold">Birthdate: </span>—/—/— —</p>
                     </li>
-                    <li>
-                        <p><span class="bold">Level: </span>instructor</p>
-                    </li>
+
                     <li>
                         <p><span class="bold">Location: </span>Madrid, Spain</p>
+                        <p class="hide" style="display: none;"><span class="bold">Location: </span>—</p>
                     </li>
                     <li>
                         <p><span class="bold">Email: </span>jampaul@mail.com</p>
+                        <p class="hide" style="display: none;"><span class="bold">Email: </span>—</p>
                     </li>
                     <li>
                         <p><span class="bold">Phone: </span>+1 (289) 830-1724</p>
+                        <p class="hide" style="display: none;"><span class="bold">Phone: </span>—</p>
                     </li>
                 </ul>
             </div>
             <div class="about">
                 <h3>About me</h3>
-                <p class="aboutContent">Three discs fused together. Limited mobility. Turning 50. Why not give PYC a
-                    shot
-                    as nothing else has worked.</p>
+                <textarea class="aboutContent" placeholder="Tell your classmates about yourself…"></textarea>
             </div>
             <div class="favorites">
                 <h3>My favorite programs</h3>
@@ -142,14 +143,14 @@
                             <p>HIDE</p>
                             <i class="fas fa-times"></i>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="footerBar">
+    <!--<div class="footerBar">
         <ul>
             <li>
                 <a href="programs.html">
@@ -174,22 +175,27 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div>-->
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="/assets/js/jquery.nicescroll.min.js"></script>
-    <script>
+    <!-- <script>
         $(function () {
             $("#thisdiv").niceScroll({
                 cursorcolor: '#F68170',
                 cursorwidth: 7,
-                railpadding: { top: 10, right: 0, left: 0, bottom: 5 },
-                
+                railpadding: {
+                    top: 10,
+                    right: 0,
+                    left: 0,
+                    bottom: 5
+                },
+
                 cursorborderradius: 4,
                 autohidemode: false
             });
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
