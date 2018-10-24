@@ -58,7 +58,7 @@
 
     </div>
     <!-- GROUP EVENTS -->
-    <div class="events group" style="display: none">
+    <div class="events group" style="">
         <a href="program.html">
             <div class="event">
                 <div class="headerEvent" style="background-image: url(assets/images/App/head-program1.png);">
@@ -81,13 +81,16 @@
                     </div>
 
                     <div class="nextLesson">
-                        <p>Next lesson: <span class="bold">22/12/2018</span> at <span class="bold">8:30 PM</span></p>
+                        
                         <div class="notConfirmed">
+                            <p class="nextText">Next lesson: <span class="bold">22/12/2018</span> at <span class="bold">8:30 PM</span></p>
                             <p>Booking not confirmed yet.</p>
                             <p>Please, wait for confirmation</p>
                             <p class="or">- OR -</p>
                         </div>
-
+                        <!-- <div class="сonfirmed">
+                                <p class="nextText">Next lesson: <span class="bold">22/12/2018</span> at <span class="bold">8:30 PM</span></p>
+                        </div> -->
                     </div>
                     <div class="contactInstructor">
                         <a class="" href='contact-instructor.php?user=<?php echo $user; ?>&page=instructor&instructor=<?php echo $id; ?>&student=<?php echo $user; ?>'>
@@ -103,7 +106,7 @@
     </div>
 
     <!-- PRIVATE EVENTS -->
-    <div class="events private">
+    <div class="events private" style="display: none">
 
         <div class="event">
             <div class="headerEvent">
@@ -120,18 +123,18 @@
 
                 <div class="nextLesson">
 
-                    <div class="notConfirmed">
+                    <!-- <div class="notConfirmed">
                         <p class="nextText">Next lesson: <span class="bold">22/12/2018</span> at <span class="bold">8:30 PM</span></p>
                         <p>Booking not confirmed yet.</p>
                         <p>Please, wait for confirmation</p>
                         <input class="change" name="changeGroupEvent" type="submit" value="Change booking">
                         <p class="or">- OR -</p>
-                    </div>
-                    <!-- <div class="confirmed">
+                    </div> -->
+                    <div class="confirmed">
                         <p class="nextText">Next lesson: <span class="bold">22/12/2018</span> at <span class="bold">8:30 PM</span></p>
                         <input class="change" name="changeGroupEvent" type="submit" value="Change booking">
                         <p class="or">- OR -</p>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="contactInstructor">
                     <a class="" href='contact-instructor.php?user=<?php echo $user; ?>&page=instructor&instructor=<?php echo $id; ?>&student=<?php echo $user; ?>'>

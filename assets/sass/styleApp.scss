@@ -273,10 +273,10 @@ body {
         font-family: museo-sans, sans-serif;
         font-size: 13px;
         font-weight: 500;
-        margin: 20px;
+        // margin: 20px;
         margin-top: 10px;
         margin-bottom: 0;
-
+        width: 24%;
         p {
             margin-top: 5px;
         }
@@ -285,11 +285,8 @@ body {
             color: $gray;
         }
 
-        .fa-table {
-            font-size: 36px;
-        }
 
-        .fa-video {
+        .fa-question {
             font-size: 36px;
         }
 
@@ -628,7 +625,7 @@ button {
             font-family: museo-sans, sans-serif;
             font-size: 13px;
             font-weight: 500;
-            margin: 20px;
+            // margin: 20px;
             margin-top: 10px;
             margin-bottom: 0;
 
@@ -725,7 +722,7 @@ button {
     .infoContainer {
         padding-left: 15px;
         padding-right: 15px;
-
+        margin-bottom: 93px;
         .stats {
             margin-top: 25px;
             margin-bottom: 25px;
@@ -861,7 +858,7 @@ button {
             font-family: museo-sans, sans-serif;
             font-size: 13px;
             font-weight: 500;
-            margin: 20px;
+            // margin: 20px;
             margin-top: 10px;
             margin-bottom: 0;
 
@@ -915,7 +912,9 @@ button {
             position: relative;
             top: -2px;
         }
-
+        a{
+            color: unset;
+        }
         i {
             display: inline-block;
             font-size: 28px;
@@ -998,10 +997,10 @@ button {
             font-family: museo-sans, sans-serif;
             font-size: 13px;
             font-weight: 500;
-            margin: 20px;
+            // margin: 20px;
             margin-top: 10px;
             margin-bottom: 0;
-
+            width: 24%;
             p {
                 margin-top: 5px;
             }
@@ -1052,7 +1051,9 @@ button {
             position: relative;
             top: -2px;
         }
-
+        a{
+            color: unset;
+        }
         i {
             display: inline-block;
             font-size: 28px;
@@ -1068,7 +1069,7 @@ button {
 
     .form {
         width: 309px;
-        margin: 0 auto;
+        margin: 0 auto 93px auto;
 
         .label {
             font-size: 20px;
@@ -1115,6 +1116,47 @@ button {
         }
     }
 
+    .footerBar {
+        background-color: #fff;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 73px;
+        margin-bottom: 0px;
+        text-align: center;
+        box-shadow: 3px 3px 10px #0000004d;
+        z-index: 1;
+
+        li {
+            display: inline-block;
+            color: $gray;
+            font-family: museo-sans, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            // margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            p {
+                margin-top: 5px;
+            }
+
+            a {
+                color: $gray;
+            }
+
+
+
+            .fa-calendar-alt {
+                font-size: 36px;
+            }
+
+            .fa-user {
+                font-size: 36px;
+            }
+        }
+    }
 
 
 }
@@ -1186,7 +1228,7 @@ button {
     .infoContainer {
         padding-left: 15px;
         padding-right: 15px;
-
+        margin-bottom: 93px;
         .stats {
             margin-top: 25px;
             margin-bottom: 45px;
@@ -1279,6 +1321,10 @@ button {
 
         }
     }
+
+    .footerBar {
+        box-shadow: 3px 3px 10px #0000004d;
+    }
 }
 
 .contactInstructorPage {
@@ -1293,7 +1339,9 @@ button {
         width: 335px;
         background: #fff;
         margin: 0 auto;
-
+        a{
+            color: unset;
+        }
         h3 {
             font-size: 22px;
             font-weight: 700;
@@ -1322,80 +1370,124 @@ button {
     }
 
     text-align: center;
-
-    a {
-        color: unset;
-        max-width: 192px;
-
-        &.btn {
-            border: 1px solid #000;
-            padding: 13px 0;
+    .contactBlock{
+        margin-bottom: 93px;
+        a {
+            color: unset;
             max-width: 192px;
-            display: block;
-            margin: 0 auto;
-            border-radius: 8px;
+    
+            &.btn {
+                border: 1px solid #000;
+                padding: 13px 0;
+                max-width: 192px;
+                display: block;
+                margin: 0 auto;
+                border-radius: 8px;
+    
+                p {
+                    display: inline-block;
+                }
+    
+                i {
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+    
+                display: block;
+            }
+    
+            &.facebook {
+                display: block;
+                margin: 0 auto;
+            }
+    
+            &.instagram {
+                display: block;
+                margin-top: 35px;
+                margin: 35px auto 0 auto;
+            }
+    
+            &.message {
+                margin-top: 50px;
+            }
+    
+            &.call {
+                margin-top: 50px;
+                text-align: left;
+    
+                i {
+                    margin-right: 39px;
+                    margin-left: 17px;
+                }
+            }
+    
+            p {
+    
+                font-family: museo-sans, sans-serif;
+    
+                font-size: 18px;
+                font-weight: 700;
+    
+                &.fb {
+                    color: #4267B2;
+                    font-size: 16px;
+                    margin-top: 15px;
+                }
+    
+                &.insta {
+                    color: #D75057;
+                    font-size: 16px;
+                    margin-top: 15px;
+                }
+            }
+    
+            img {
+                height: 58px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+
+    .footerBar {
+        background-color: #fff;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 73px;
+        margin-bottom: 0px;
+        text-align: center;
+        box-shadow: 3px 3px 10px #0000004d;
+        z-index: 1;
+
+        li {
+            display: inline-block;
+            color: $gray;
+            font-family: museo-sans, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            // margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
 
             p {
-                display: inline-block;
+                margin-top: 5px;
             }
 
-            i {
-                display: inline-block;
-                margin-right: 10px;
-                font-size: 20px;
+            a {
+                color: $gray;
             }
 
-            display: block;
-        }
 
-        &.facebook {
-            display: block;
-            margin: 0 auto;
-        }
-
-        &.instagram {
-            display: block;
-            margin-top: 35px;
-            margin: 35px auto 0 auto;
-        }
-
-        &.message {
-            margin-top: 50px;
-        }
-
-        &.call {
-            margin-top: 50px;
-            text-align: left;
-
-            i {
-                margin-right: 39px;
-                margin-left: 17px;
-            }
-        }
-
-        p {
-
-            font-family: museo-sans, sans-serif;
-
-            font-size: 18px;
-            font-weight: 700;
-
-            &.fb {
-                color: #4267B2;
-                font-size: 16px;
-                margin-top: 15px;
+            .fa-calendar-alt {
+                font-size: 36px;
             }
 
-            &.insta {
-                color: #D75057;
-                font-size: 16px;
-                margin-top: 15px;
+            .fa-user {
+                font-size: 36px;
             }
-        }
-
-        img {
-            height: 58px;
-            margin: 0 auto;
         }
     }
 
@@ -1424,7 +1516,9 @@ button {
             position: relative;
             top: -2px;
         }
-
+        a{
+            color: unset;
+        }
         i {
             display: inline-block;
             font-size: 28px;
@@ -1441,7 +1535,7 @@ button {
 
     .form {
         width: 309px;
-        margin: 0 auto;
+        margin: 0 auto 93px auto;
 
         .label {
             font-size: 20px;
@@ -1576,13 +1670,53 @@ button {
         }
     }
 
+    .footerBar {
+        background-color: #fff;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 73px;
+        margin-bottom: 0px;
+        text-align: center;
+        box-shadow: 3px 3px 10px #0000004d;
+        z-index: 1;
 
+        li {
+            display: inline-block;
+            color: $gray;
+            font-family: museo-sans, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            // margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
 
+            p {
+                margin-top: 5px;
+            }
 
+            a {
+                color: $gray;
+            }
 
+            .fa-table {
+                font-size: 36px;
+            }
 
+            .fa-video {
+                font-size: 36px;
+            }
 
+            .fa-calendar-alt {
+                font-size: 36px;
+            }
 
+            .fa-user {
+                font-size: 36px;
+            }
+        }
+    }
 
 }
 
@@ -1624,7 +1758,7 @@ button {
         margin-top: 25px;
 
         .headerEvent {
-            height: 231px;
+            height: 200px;
             width: 335px;
             background-size: cover;
             background-position: center;
@@ -1719,7 +1853,8 @@ button {
             }
 
             .nextLesson {
-                margin-top: 10px;
+                margin-top: 15px;
+                padding-bottom: 15px;
 
                 p {
                     font-family: museo-sans, sans-serif;
@@ -1730,19 +1865,35 @@ button {
 
                 .notConfirmed {
                     margin-top: 10px;
-
-                    .or {
-                        font-family: museo-sans, sans-serif;
-                        color: $gray;
-                        font-size: 14px;
-                        font-weight: 300;
-                        font-style: italic;
-                        margin-top: 10px;
+                    .nextText{
+                        color: $soft-gray;
                         margin-bottom: 10px;
                     }
                 }
 
+                .сonfirmed {
+                    margin-top: 10px;
+                    .nextText{
+                        padding-bottom: 15px;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                        border-color: #CECECE;
+                    }
+                }
+
+                
+                .or {
+                    font-family: museo-sans, sans-serif;
+                    color: $gray;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: italic;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
             }
+
+
 
             .contactInstructor {
                 text-align: center;
@@ -1813,6 +1964,7 @@ button {
                 .confirmed {
 
                     .nextText {
+                        padding-bottom: 15px;
                         padding-top: 15px;
                         border-top-width: 1px;
                         border-top-style: solid;
@@ -1914,7 +2066,9 @@ button {
             position: relative;
             top: -2px;
         }
-
+        a{
+            color: unset;
+        }
         i {
             display: inline-block;
             font-size: 28px;
@@ -1930,8 +2084,8 @@ button {
 
     .form {
         width: 309px;
-        margin: 0 auto;
-
+        margin: 0 auto 93px auto;
+        
         .label {
             font-size: 20px;
             font-weight: 500;
@@ -1990,7 +2144,53 @@ button {
         }
     }
 
+    .footerBar {
+        background-color: #fff;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 73px;
+        margin-bottom: 0px;
+        text-align: center;
+        box-shadow: 3px 3px 10px #0000004d;
+        z-index: 1;
 
+        li {
+            display: inline-block;
+            color: $gray;
+            font-family: museo-sans, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            // margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            p {
+                margin-top: 5px;
+            }
+
+            a {
+                color: $gray;
+            }
+
+            .fa-table {
+                font-size: 36px;
+            }
+
+            .fa-video {
+                font-size: 36px;
+            }
+
+            .fa-calendar-alt {
+                font-size: 36px;
+            }
+
+            .fa-user {
+                font-size: 36px;
+            }
+        }
+    }
 
 }
 
@@ -2018,7 +2218,9 @@ button {
             position: relative;
             top: -2px;
         }
-
+        a{
+            color: unset;
+        }
         i {
             display: inline-block;
             font-size: 28px;
@@ -2035,7 +2237,7 @@ button {
 
     .form {
         width: 309px;
-        margin: 0 auto;
+        margin: 0 auto 93px auto;
 
         .label {
             font-size: 20px;
@@ -2178,6 +2380,54 @@ button {
                 background: #25D04D;
             }
 
+        }
+    }
+
+    .footerBar {
+        background-color: #fff;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 73px;
+        margin-bottom: 0px;
+        text-align: center;
+        box-shadow: 3px 3px 10px #0000004d;
+        z-index: 1;
+
+        li {
+            display: inline-block;
+            color: $gray;
+            font-family: museo-sans, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            // margin: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            p {
+                margin-top: 5px;
+            }
+
+            a {
+                color: $gray;
+            }
+
+            .fa-table {
+                font-size: 36px;
+            }
+
+            .fa-video {
+                font-size: 36px;
+            }
+
+            .fa-calendar-alt {
+                font-size: 36px;
+            }
+
+            .fa-user {
+                font-size: 36px;
+            }
         }
     }
 }
