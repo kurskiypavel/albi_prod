@@ -10,9 +10,10 @@ $id = $_GET['id'];
 $user = $_GET['user'];
 
 
+
 //select user data
 //$query = "SELECT * FROM users WHERE id='$id'";
-$query = "SELECT * , count(programs.id) programsCount
+$query = "SELECT users.* , count(programs.id) programsCount
     FROM users
     JOIN programs ON users.id = programs.instructor_id WHERE users.id='$id'";
 $result = $conn->query($query);
