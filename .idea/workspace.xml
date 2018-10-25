@@ -2,54 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af93a33-bcd4-42e7-b56a-f8407efac40f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/adminProgram.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/adminVideo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/video.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/videoClass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/videos.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/videos/bookmarker.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/deprecated/videos/bookmarker1.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/adminUser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/bookGroupEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/bookPrivateEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/changeGroupEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/changePrivateEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/contact-instructor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/events.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/instructor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/program.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/programs.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages/user.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/adminUser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/bookGroupEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/bookPrivateEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/changeGroupEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/changePrivateEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/contact-instructor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/events.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/pages_html/instructor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/query.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/save_phone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deprecatedHTML/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deprecatedHTML/video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deprecatedHTML/video/mov_bbb.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deprecatedHTML/videos.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/events.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/instructor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/privacy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/program.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/programs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/settings.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/terms.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.php" afterPath="$PROJECT_DIR$/app/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages_styled/instructor.php" afterPath="$PROJECT_DIR$/app/pages_styled/instructor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages_styled/bookPrivateEvent.php" afterPath="$PROJECT_DIR$/app/pages_styled/bookPrivateEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages_styled/events.php" afterPath="$PROJECT_DIR$/app/pages_styled/events.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,13 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instructor.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/pages_styled/instructor.php">
+      <file leaf-file-name="events.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/pages_styled/events.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="844">
+              <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
               <folding>
-                <marker date="1540419197363" expanded="true" signature="219:359" ph="SELECT * , c... users" />
+                <marker date="1540419732376" expanded="true" signature="2327:2487" ph="SELECT DISTI... events" />
+                <marker date="1540419732376" expanded="true" signature="4080:4513" ph="..." />
+                <marker date="1540419732376" expanded="true" signature="4133:4286" ph="..." />
+                <marker date="1540419732376" expanded="true" signature="4200:4282" ph="..." />
+                <marker date="1540419732376" expanded="true" signature="4612:4813" ph="..." />
+                <marker date="1540419732376" expanded="true" signature="5492:5640" ph="SELECT *,eve... events" />
+                <marker date="1540419732376" expanded="true" signature="6935:7478" ph="..." />
+                <marker date="1540419732376" expanded="true" signature="7570:8015" ph="..." />
+                <marker date="1540419732376" expanded="true" signature="7619:7757" ph="..." />
               </folding>
             </state>
           </provider>
@@ -213,19 +175,19 @@
         <option value="$PROJECT_DIR$/program.html" />
         <option value="$PROJECT_DIR$/app/pages/program.php" />
         <option value="$PROJECT_DIR$/app/pages/programs.php" />
-        <option value="$PROJECT_DIR$/app/pages_styled/events.php" />
         <option value="$PROJECT_DIR$/app/pages/events.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/program.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/programs.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/contact-instructor.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/changeGroupEvent.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/bookGroupEvent.php" />
-        <option value="$PROJECT_DIR$/app/pages_styled/bookPrivateEvent.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/changePrivateEvent.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/adminUser.php" />
         <option value="$PROJECT_DIR$/app/parts/footer.php" />
         <option value="$PROJECT_DIR$/app/config.php" />
         <option value="$PROJECT_DIR$/app/pages_styled/instructor.php" />
+        <option value="$PROJECT_DIR$/app/pages_styled/bookPrivateEvent.php" />
+        <option value="$PROJECT_DIR$/app/pages_styled/events.php" />
       </list>
     </option>
   </component>
@@ -282,6 +244,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="albi_prod" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="albi_prod" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages_styled" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="albi_prod" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="albi_prod" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,12 +409,12 @@
       <workItem from="1539616874967" duration="19322000" />
       <workItem from="1539698111201" duration="50061000" />
       <workItem from="1540310152909" duration="32769000" />
-      <workItem from="1540417830180" duration="986000" />
+      <workItem from="1540417830180" duration="1501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154721000" />
+    <option name="totallyTimeSpent" value="155236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1176" y="23" width="1346" height="1360" extended-state="0" />
@@ -507,6 +505,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="111" lean-forward="true" selection-start-line="26" selection-start-column="111" selection-end-line="26" selection-end-column="111" />
+          <folding>
+            <marker date="1539986831346" expanded="true" signature="405:727" ph="INSERT INTO programs... " />
+            <marker date="1539986831346" expanded="true" signature="933:1379" ph="UPDATE progr... " />
+            <marker date="1539986831346" expanded="true" signature="1500:1535" ph="DELETE FROM " />
+            <marker date="1539986831346" expanded="true" signature="1678:1804" ph="INSERT INTO programs... " />
+            <marker date="1539986831346" expanded="true" signature="1936:1987" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -515,32 +520,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <marker date="1538512729000" expanded="true" signature="338:930" ph="UPDATE users... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/pages/bookPrivateEvent.php" />
-    <entry file="file://$PROJECT_DIR$/app/classes/eventClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/pages_html/bookGroupEvent.html" />
     <entry file="file://$PROJECT_DIR$/app/pages_styled/events.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1540395918394" expanded="true" signature="2327:2487" ph="SELECT DISTI... events" />
-            <marker date="1540395918394" expanded="true" signature="4080:4513" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="4133:4286" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="4200:4282" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="4612:4813" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="5492:5640" ph="SELECT *,eve... events" />
-            <marker date="1540395918394" expanded="true" signature="6935:7478" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="7570:8015" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="7619:7757" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="2327:2487" ph="SELECT DISTI... events" />
+            <marker date="1540419732376" expanded="true" signature="4080:4513" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="4133:4286" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="4200:4282" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="4612:4813" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="5492:5640" ph="SELECT *,eve... events" />
+            <marker date="1540419732376" expanded="true" signature="6935:7478" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="7570:8015" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="7619:7757" ph="..." />
           </folding>
         </state>
       </provider>
@@ -586,22 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages_styled/bookGroupEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="102" column="95" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages_styled/bookPrivateEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="92" column="104" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/pages_styled/contact-instructor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -618,24 +603,6 @@
           <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
           <folding>
             <marker date="1540412084248" expanded="true" signature="249:284" ph="SELECT * FRO... events" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages_styled/events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="224" column="4" lean-forward="false" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="47" />
-          <folding>
-            <marker date="1540395918394" expanded="true" signature="2327:2487" ph="SELECT DISTI... events" />
-            <marker date="1540395918394" expanded="true" signature="4080:4513" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="4133:4286" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="4200:4282" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="4612:4813" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="5492:5640" ph="SELECT *,eve... events" />
-            <marker date="1540395918394" expanded="true" signature="6935:7478" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="7570:8015" ph="..." />
-            <marker date="1540395918394" expanded="true" signature="7619:7757" ph="..." />
           </folding>
         </state>
       </provider>
@@ -700,14 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1ca98593-1164-4a2d-a8b3-47ed9eec7035/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -722,6 +681,64 @@
           <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding>
             <marker date="1540419197363" expanded="true" signature="219:359" ph="SELECT * , c... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/classes/eventClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1539987252809" expanded="true" signature="459:781" ph="INSERT INTO events... " />
+            <marker date="1539987252809" expanded="true" signature="1073:1385" ph="INSERT INTO events... " />
+            <marker date="1539987252809" expanded="true" signature="1552:1570" ph="UPDATE event... " />
+            <marker date="1539987252809" expanded="true" signature="1552:1766" ph="UPDATE event... " />
+            <marker date="1539987252809" expanded="true" signature="1921:2115" ph="UPDATE event... " />
+            <marker date="1539987252809" expanded="true" signature="2239:2272" ph="DELETE FROM " />
+            <marker date="1539987252809" expanded="true" signature="2397:2467" ph="UPDATE event... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages_styled/bookGroupEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="95" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages_styled/bookPrivateEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1ca98593-1164-4a2d-a8b3-47ed9eec7035/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages_styled/events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="844">
+          <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding>
+            <marker date="1540419732376" expanded="true" signature="2327:2487" ph="SELECT DISTI... events" />
+            <marker date="1540419732376" expanded="true" signature="4080:4513" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="4133:4286" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="4200:4282" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="4612:4813" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="5492:5640" ph="SELECT *,eve... events" />
+            <marker date="1540419732376" expanded="true" signature="6935:7478" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="7570:8015" ph="..." />
+            <marker date="1540419732376" expanded="true" signature="7619:7757" ph="..." />
           </folding>
         </state>
       </provider>

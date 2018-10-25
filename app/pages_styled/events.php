@@ -207,7 +207,7 @@ $classEvent = new eventClass($conn);
 
                     </div>
                     <div class="contactInstructor">
-                        <?echo '<a href="contact-instructor.php?user='.$user.'&page=events&instructor=' . $obj->instructor . '&student=' . $user . '"><p>Contact Instructor</p></a>';?>
+                        <?php echo '<a href="contact-instructor.php?user='.$user.'&page=events&instructor=' . $obj->instructor . '&student=' . $user . '"><p>Contact Instructor</p></a>';?>
                         <i class="far fa-comment"></i>
                     </div>
 

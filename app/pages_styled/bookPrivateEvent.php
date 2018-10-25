@@ -21,7 +21,8 @@ if ($_POST) {
         $comment = htmlspecialchars($_POST['comment']);
         $confirmed = '0';
         $canceled = '0';
-        $repeatable = $_POST['repeatable'];
+//        $repeatable = $_POST['repeatable'];
+        $repeatable = '0';
 
         //createPrivateEvent
         $obj->createPrivateEvent(
