@@ -10,15 +10,6 @@ $classProgram = new programClass($conn);
 $user = $_GET['user'];
 $id = $_GET['id'];
 
-//add and delete favorite program
-if ($_POST) {
-
-    if (isset($_POST['like'])) {
-        $classProgram->addToFavorite($user, $id);
-    } elseif(isset($_POST['dislike'])) {
-        $classProgram->deleteFromFavorites($id);
-    }
-}
 
 $query = "SELECT *,programs.level level  FROM programs JOIN users ON programs.instructor_id=users.id WHERE programs.id='$id'";
 $result = $conn->query($query);
@@ -35,12 +26,12 @@ $obj = $result->fetch_object();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Program</title>
     <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/styleApp.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 
     <!-- FONTS IMPORT -->
@@ -69,7 +60,8 @@ $obj = $result->fetch_object();
                 clearTimeout(t);
                 try {
                     Typekit.load(config)
-                } catch (e) {}
+                } catch (e) {
+                }
             };
             s.parentNode.insertBefore(tk, s)
         })(document);
@@ -79,20 +71,35 @@ $obj = $result->fetch_object();
 </head>
 
 <body class="single">
+
 <div class="programItem">
     <div class="program">
-        <div class="headerProgram" style="background-image: url(../../assets/images/App/programs-images/<?php echo $obj->image;?>);">
+        <div class="headerProgram"
+             style="background-image: url(../../assets/images/App/programs-images/<?php echo $obj->image; ?>);">
             <ul>
-                <li><img src="/assets/images/App/share-solid.svg" alt="share"></li>
-                <li><img src="/assets/images/App/heart-solid.svg" alt="like"></li>
+                <li><i class="fas fa-share"></i></li>
+                <?php
+                //        select favorite programs BEGINS
+                $queryFavoriteProgram = "SELECT * FROM `favorite-programs` WHERE user='$user' AND program='$id'";
+                $resultFavoriteProgram = $conn->query($queryFavoriteProgram);
+                $rowsFavoriteProgram = $resultFavoriteProgram->num_rows;
+                $objFavoriteProgram = $resultFavoriteProgram->fetch_object();
+                if (!$objFavoriteProgram) {
+                    echo '<li><i class="far fa-heart"></i></li>';
+                } elseif ($objFavoriteProgram) {
+                    echo '<li><i class="fas fa-heart"></i></li>';
+                }
+                //        select favorite programs ENDS
+                ?>
+
             </ul>
         </div>
         <div class="body">
-            <h3><?php echo $obj->title;?></h3>
+            <h3><?php echo $obj->title; ?></h3>
             <div class="features">
                 <ul>
                     <li><img src="../../assets/images/App/calendar-regular.svg" alt="calIcon">
-                        <p>Every <?php echo $obj->schedule;?></p>
+                        <p>Every <?php echo $obj->schedule; ?></p>
                     </li>
                     <li>
                         <?php
@@ -102,11 +109,11 @@ $obj = $result->fetch_object();
                         $rows = $result->num_rows;
                         $objEvent = $result->fetch_object();
                         if (!$objEvent) {
-                            echo '<button class="book" onclick="location.href =\'bookGroupEvent.php?user='.$user.'&page=program&program=' . $id . '&student=' . $user . '&instructor=' . $obj->instructor_id.'\'">Book place in group</button>';
+                            echo '<button class="book" onclick="location.href =\'bookGroupEvent.php?user=' . $user . '&page=program&program=' . $id . '&student=' . $user . '&instructor=' . $obj->instructor_id . '\'">Book place in group</button>';
 
                         } elseif ($objEvent) {
                             //already booked - event query
-                            echo '<button class="booked" onclick="location.href =\'changeGroupEvent.php?user='.$user.'&page=program&id='.$objEvent->id.'\'">Change booking</button>';
+                            echo '<button class="booked" onclick="location.href =\'changeGroupEvent.php?user=' . $user . '&page=program&id=' . $objEvent->id . '\'">Change booking</button>';
                         }
                         //        booking functionality ENDS
                         ?>
@@ -118,35 +125,36 @@ $obj = $result->fetch_object();
                 <h3>Overview</h3>
                 <ul>
                     <li>
-                        <p>Focus: <?php echo $obj->focus;?></p>
+                        <p>Focus: <?php echo $obj->focus; ?></p>
                     </li>
                     <li>
-                        <p>Level: <span class="bold"><?php echo $obj->level;?></span></p>
+                        <p>Level: <span class="bold"><?php echo $obj->level; ?></span></p>
                     </li>
                     <li>
-                        <p>Duration: <span class="bold"><?php echo $obj->duration;?></span></p>
+                        <p>Duration: <span class="bold"><?php echo $obj->duration; ?></span> min</p>
                     </li>
                     <li>
-                        <p>Group size: <span class="bold"><?php echo $obj->group_size;?></span> people</p>
+                        <p>Group size: <span class="bold"><?php echo $obj->group_size; ?></span> people</p>
                     </li>
                 </ul>
             </div>
 
             <div class="description">
                 <h3>Description</h3>
-                <p><?php echo $obj->description;?></p>
+                <p><?php echo $obj->description; ?></p>
             </div>
 
             <div class="instructor">
                 <h3>Instructor</h3>
-                <a href="instructor.php?user=<?php echo $user;?>&id=<?php echo $obj->instructor_id;?>">
+                <a href="instructor.php?user=<?php echo $user; ?>&id=<?php echo $obj->instructor_id; ?>">
                     <div class="subInstructor">
-                        <div class="headerInstructor" style="background-image: url(../../assets/images/App/user-images/<?php echo $obj->avatar;?>);">
+                        <div class="headerInstructor"
+                             style="background-image: url(../../assets/images/App/user-images/<?php echo $obj->avatar; ?>);">
                         </div>
 
                         <div class="body">
-                            <h3><?php echo $obj->first_name . ' ' . $obj->last_name;?></h3>
-                            <p class="shortDescription"><?php echo $obj->about;?></p>
+                            <h3><?php echo $obj->first_name . ' ' . $obj->last_name; ?></h3>
+                            <p class="shortDescription"><?php echo $obj->about; ?></p>
                             <p class="more">read more</p>
                         </div>
 
@@ -157,6 +165,15 @@ $obj = $result->fetch_object();
     </div>
 </div>
 <?php include_once '../parts/footer.php' ?>
+
+<script
+        src="//code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script src="../js/app.js">
+
+</script>
 </body>
 
 </html>

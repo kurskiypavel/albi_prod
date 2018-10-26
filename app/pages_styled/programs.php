@@ -9,22 +9,6 @@ $user = $_GET['user'];
 $classProgram = new programClass($conn);
 
 
-//add dynamic favorite
-if ($_POST) {
-
-    foreach ($_POST as $name => $value) {
-        //pass dynamic name from $_POST input
-
-        if (strpos($name,'DISLIKE') !== false) {
-            $name = str_replace('DISLIKE', '', $name);
-            $classProgram->deleteFromFavorites($name);
-        } else{
-            $classProgram->addToFavorite($user,$name);
-        }
-    }
-
-}
-
 ?>
 
 
@@ -35,12 +19,13 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Programs</title>
     <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/styleApp.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
 
 
     <!-- FONTS IMPORT -->
@@ -76,7 +61,14 @@ if ($_POST) {
         })(document);
     </script>
 
+    <script
+            src="//code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 
+    <script>
+
+    </script>
 </head>
 
 <body>
@@ -90,25 +82,110 @@ $objUser = $result->fetch_object();
 
 
 ?>
-    <div class="header">
-        <div class="searchBar">
-            <div class="input">
-                <input type="text" placeholder="Search programs...">
-                <i class="fas fa-search"></i>
-            </div>
+<div class="header">
+    <div class="searchBar">
+        <div class="input">
+            <input id='myInput' onkeyup="myFunction(); showAllPrograms();" type="text" placeholder="Search programs...">
+            <i class="fas fa-search"></i>
         </div>
-        <ul class='programLists'>
-            <li >New Programs</li>
-            <li class="active">All Programs</li>
-        </ul>
-
     </div>
 
-    <div style="display: none;" class="programs new">
 
+    <ul class='programLists'>
+        <li id='newProgram'>New Programs</li>
+        <li id='allProgram' class="active">All Programs</li>
+    </ul>
+
+</div>
+
+<div style="display: none;" class="programs new">
+    <table id="myTableNew">
         <?php
 
         $query = "SELECT * FROM programs WHERE new='1'";
+        $result = $conn->query($query);
+
+        $rows = $result->num_rows;
+
+        for ($i = 0; $i < $rows; ++$i) {
+            $result->data_seek($i);
+            $obj = $result->fetch_object();
+
+            echo '<tr><td><a href="program.php?user=' . $user . '&id=' . $obj->id . '">
+            <div class="program">
+                <div class="headerProgram" style="background-image: url(../../assets/images/App/programs-images/' . $obj->image . ');">
+                    <ul>
+                        <li><i class="fas fa-share"></i></li>
+                ';
+                //        select favorite programs BEGINS
+                $queryFavoriteProgram = "SELECT * FROM `favorite-programs` WHERE user='$user' AND program='$obj->id'";
+                $resultFavoriteProgram = $conn->query($queryFavoriteProgram);
+                $rowsFavoriteProgram = $resultFavoriteProgram->num_rows;
+                $objFavoriteProgram = $resultFavoriteProgram->fetch_object();
+                if (!$objFavoriteProgram){
+                    echo '<li><i id="'.$obj->id.'" class="far fa-heart"></i></li>';
+                } elseif ($objFavoriteProgram){
+                    echo '<li><i id="'.$obj->id.'" class="fas fa-heart"></i></li>';
+                }
+                //        select favorite programs ENDS
+
+                echo '
+                    </ul>
+                </div>
+                <div class="body">
+                    <h3 class="title">' . $obj->title . '</h3>
+                    <div class="features">
+                        <ul>
+                            <li><img src="../../assets/images/App/calendar-regular.svg" alt="calIcon">
+                                <p>Every ' . $obj->schedule . '</p>
+                            </li>
+                            <li>
+                                <p>Level: <span class="bold">' . $obj->level . '</span></p>
+                            </li>
+                            <li>
+                                <p>Duration: <span class="bold">' . $obj->duration . ' min</span></p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p class="shortDescription">' . $obj->description . '</p>
+
+                        <p class="more">read more</p>
+
+                    </div></a>';
+
+
+            //        booking functionality
+            $queryEvent = "select id from events WHERE program='$obj->id' AND student='$user'";
+            $resultEvent = $conn->query($queryEvent);
+            $rowsEvent = $resultEvent->num_rows;
+            $objEvent = $resultEvent->fetch_object();
+            //book place - redirect to bookGroupevent
+            if (!$objEvent) {
+                echo '<button class="book" onclick="location.href =\'bookGroupEvent.php?user=' . $user . '&page=programs&program=' . $obj->id . '&student=' . $user . '&instructor=' . $obj->instructor_id . '\'">Book place in group</button>';
+            } elseif ($objEvent) {
+                //already booked - event query
+                echo '<button class="booked" onclick="location.href =\'changeGroupEvent.php?user=' . $user . '&page=programs&id=' . $objEvent->id . '\'">Change booking</button>';
+            }
+
+            echo '</div>
+            </div>
+            </td></tr>
+        ';
+        }
+
+        ?>
+    </table>
+
+</div>
+
+<div class="programs all">
+    <table id="myTableAll">
+        <?php
+
+        $query = "SELECT * FROM programs";
         $result = $conn->query($query);
         if (!$result) die($conn->connect_error);
         $rows = $result->num_rows;
@@ -117,26 +194,36 @@ $objUser = $result->fetch_object();
             $result->data_seek($i);
             $obj = $result->fetch_object();
 
-            echo '<a href="program.php?user=' . $user . '&id=' . $obj->id . '">
+            echo '<tr><td><a href="program.php?user=' . $user . '&id=' . $obj->id . '">
             <div class="program">
-                <div class="headerProgram" style="background-image: url(../../assets/images/App/'.$obj->image.');">
+                <div class="headerProgram" style="background-image: url(../../assets/images/App/programs-images/' . $obj->image . ');">
                     <ul>
-                        <li class="share"><img src="/assets/images/App/share-solid.svg" alt="share"></li>
-                        <li class="like">
-                            <img class="likeHeart" src="/assets/images/App/heart-solid.svg" alt="like">
-                            <!-- <img  class="likeHeart liked" src="/assets/images/App/heart-not-solid.svg" alt="liked"> -->
-                        </li>
+                        <li><i class="fas fa-share"></i></li>
+                ';
+                //        select favorite programs BEGINS
+                $queryFavoriteProgram = "SELECT * FROM `favorite-programs` WHERE user='$user' AND program='$obj->id'";
+                $resultFavoriteProgram = $conn->query($queryFavoriteProgram);
+                $rowsFavoriteProgram = $resultFavoriteProgram->num_rows;
+                $objFavoriteProgram = $resultFavoriteProgram->fetch_object();
+                if (!$objFavoriteProgram){
+                    echo '<li><i id="'.$obj->id.'" class="far fa-heart"></i></li>';
+                } elseif ($objFavoriteProgram){
+                    echo '<li><i id="'.$obj->id.'" class="fas fa-heart"></i></li>';
+                }
+                //        select favorite programs ENDS
+
+                echo '
                     </ul>
                 </div>
                 <div class="body">
-                    <h3>'.$obj->title.'</h3>
+                    <h3 class="title">' . $obj->title . '</h3>
                     <div class="features">
                         <ul>
                             <li><img src="../../assets/images/App/calendar-regular.svg" alt="calIcon">
-                                <p>Every '.$obj->schedule.'</p>
+                                <p>Every ' . $obj->schedule . '</p>
                             </li>
                             <li>
-                                <p>Level: <span class="bold">'. $obj->level .'</span></p>
+                                <p>Level: <span class="bold">' . $obj->level . '</span></p>
                             </li>
                             <li>
                                 <p>Duration: <span class="bold">' . $obj->duration . ' min</span></p>
@@ -150,112 +237,38 @@ $objUser = $result->fetch_object();
 
                         <p class="more">read more</p>
 
-                    </div></a>';
+                    </div>
+                    </a>';
 
 
+            //        booking functionality
+            $queryEvent = "select id from events WHERE program='$obj->id' AND student='$user'";
+            $resultEvent = $conn->query($queryEvent);
+            $rowsEvent = $resultEvent->num_rows;
+            $objEvent = $resultEvent->fetch_object();
+            //book place - redirect to bookGroupevent
+            if (!$objEvent) {
+                echo '<button class="book" onclick="location.href =\'bookGroupEvent.php?user=' . $user . '&page=programs&program=' . $obj->id . '&student=' . $user . '&instructor=' . $obj->instructor_id . '\'">Book place in group</button>';
+            } elseif ($objEvent) {
+                //already booked - event query
+                echo '<button class="booked" onclick="location.href =\'changeGroupEvent.php?user=' . $user . '&page=programs&id=' . $objEvent->id . '\'">Change booking</button>';
+            }
 
-                    //        booking functionality
-                    $queryEvent = "select id from events WHERE program='$obj->id' AND student='$user'";
-                    $resultEvent = $conn->query($queryEvent);
-                    $rowsEvent = $resultEvent->num_rows;
-                    $objEvent = $resultEvent->fetch_object();
-                    //book place - redirect to bookGroupevent
-                    if (!$objEvent) {
-                        echo '<button class="book" onclick="location.href =\'bookGroupEvent.php?user='.$user.'&page=programs&program=' . $obj->id . '&student=' . $user . '&instructor=' . $obj->instructor_id.'\'">Book place in group</button>';
-                    } elseif ($objEvent) {
-                        //already booked - event query
-                        echo '<button class="booked" onclick="location.href =\'changeGroupEvent.php?user='.$user.'&page=programs&id='.$objEvent->id.'\'">Change booking</button>';
-                    }
-
-                echo '</div>
+            echo '</div>
             </div>
+            </td></tr>
         ';
         }
 
         ?>
 
-
-
-    </div>
-
-<div class="programs all">
-
-    <?php
-
-    $query = "SELECT * FROM programs";
-    $result = $conn->query($query);
-    if (!$result) die($conn->connect_error);
-    $rows = $result->num_rows;
-
-    for ($i = 0; $i < $rows; ++$i) {
-        $result->data_seek($i);
-        $obj = $result->fetch_object();
-
-        echo '<a href="program.php?user=' . $user . '&id=' . $obj->id . '">
-            <div class="program">
-                <div class="headerProgram" style="background-image: url(../../assets/images/App/programs-images/'.$obj->image.');">
-                    <ul>
-                        <li class="share"><img src="/assets/images/App/share-solid.svg" alt="share"></li>
-                        <li class="like">
-                            <img class="likeHeart" src="/assets/images/App/heart-solid.svg" alt="like">
-                            <!-- <img  class="likeHeart liked" src="/assets/images/App/heart-not-solid.svg" alt="liked"> -->
-                        </li>
-                    </ul>
-                </div>
-                <div class="body">
-                    <h3>'.$obj->title.'</h3>
-                    <div class="features">
-                        <ul>
-                            <li><img src="../../assets/images/App/calendar-regular.svg" alt="calIcon">
-                                <p>Every '.$obj->schedule.'</p>
-                            </li>
-                            <li>
-                                <p>Level: <span class="bold">'. $obj->level .'</span></p>
-                            </li>
-                            <li>
-                                <p>Duration: <span class="bold">' . $obj->duration . ' min</span></p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="description">
-                        <h3>Description</h3>
-                        <p class="shortDescription">' . $obj->description . '</p>
-
-                        <p class="more">read more</p>
-
-                    </div></a>';
-
-
-
-        //        booking functionality
-        $queryEvent = "select id from events WHERE program='$obj->id' AND student='$user'";
-        $resultEvent = $conn->query($queryEvent);
-        $rowsEvent = $resultEvent->num_rows;
-        $objEvent = $resultEvent->fetch_object();
-        //book place - redirect to bookGroupevent
-        if (!$objEvent) {
-            echo '<button class="book" onclick="location.href =\'bookGroupEvent.php?user='.$user.'&page=programs&program=' . $obj->id . '&student=' . $user . '&instructor=' . $obj->instructor_id.'\'">Book place in group</button>';
-        } elseif ($objEvent) {
-            //already booked - event query
-            echo '<button class="booked" onclick="location.href =\'changeGroupEvent.php?user='.$user.'&page=programs&id='.$objEvent->id.'\'">Change booking</button>';
-        }
-
-        echo '</div>
-            </div>
-        ';
-    }
-
-    ?>
-
-
-
+    </table>
 </div>
 
-
-
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <?php include_once '../parts/footer.php' ?>
+
+
+<script src='../js/app.js'></script>
 </body>
 
 </html>

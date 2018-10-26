@@ -69,13 +69,13 @@ $classEvent = new eventClass($conn);
     <div class="header eventsPage">
         <h3>Events</h3>
         <ul class='eventLists'>
-            <li class="active">Group</li>
-            <li >Personal</li>
+            <li id='groupEvents' class="active">Group</li>
+            <li id='privateEvents' >Personal</li>
         </ul>
 
     </div>
     <!-- GROUP EVENTS -->
-    <div class="events group" style="display: none">
+    <div class="events group" >
         <?php
 
         $query = "SELECT DISTINCT *,events.id event
@@ -150,7 +150,7 @@ $classEvent = new eventClass($conn);
     </div>
 
     <!-- PRIVATE EVENTS -->
-    <div class="events private" style="">
+    <div class="events private" style="display: none">
         <?php
 
         $query = "SELECT *,events.id event
@@ -219,10 +219,13 @@ $classEvent = new eventClass($conn);
         ?>
 
     </div>
-
-
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <?php include_once '../parts/footer.php' ?>
+
+    <script
+			  src="//code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script src='../js/app.js'></script>
 </body>
 
 </html>

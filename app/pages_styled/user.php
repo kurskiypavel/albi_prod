@@ -16,19 +16,6 @@ $rows = $result->num_rows;
 $obj = $result->fetch_object();
 
 
-//delete favorite program
-
-//add dynamic favorite
-if ($_POST) {
-
-    foreach ($_POST as $name => $value) {
-        //pass dynamic name from $_POST input
-        $classProgram->deleteFromFavorites($name);
-    }
-
-}
-
-
 ?>
 
 
@@ -39,12 +26,13 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My profile</title>
     <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/styleApp.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
 
 
     <!-- FONTS IMPORT -->
@@ -73,7 +61,8 @@ if ($_POST) {
                 clearTimeout(t);
                 try {
                     Typekit.load(config)
-                } catch (e) {}
+                } catch (e) {
+                }
             };
             s.parentNode.insertBefore(tk, s)
         })(document);
@@ -83,77 +72,131 @@ if ($_POST) {
 </head>
 
 <body class="userPage">
-    <div class="header">
-        <h3>My profile</h3>
-        <a href="adminUser.php?user=<?php echo $user; ?>"><i class="fas fa-cog"></i></a>
-    </div>
-    <div class="body">
-        <div class="card">
-            <div class="subInstructor">
-                <div class="headerInstructor" style="background-image: url(../../assets/images/App/user-images/<?php echo $obj->avatar; ?>);">
-                </div>
-                <div class="body">
-                    <h3><?php echo $obj->first_name . ' ' . $obj->last_name ?></h3>
-                </div>
+<div class="header">
+    <h3>My profile</h3>
+    <a href="adminUser.php?user=<?php echo $user; ?>"><i class="fas fa-cog"></i></a>
+</div>
+<div class="body">
+    <div class="card">
+        <div class="subInstructor">
+            <div class="headerInstructor"
+                 style="background-image: url(../../assets/images/App/user-images/<?php echo $obj->avatar; ?>);">
+            </div>
+            <div class="body">
+                <h3><?php echo $obj->first_name . ' ' . $obj->last_name ?></h3>
             </div>
         </div>
-        <div class="infoContainer">
-            <div class="stats">
-                <ul>
-                    <!-- <li>
-                                <p>17 Lessons Competed</p>
-                            </li> -->
-                    <li>
-                        <!-- <p><span class="bold">6</span> Favorites</p> -->
-                    </li>
-                    <li>
-<!--                        <p>Member Since <span class="bold">8 Months Ago</span></p>-->
-                        <p>Member Since <span class="bold"><?php echo $obj->created_at; ?></span></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="info">
-                <h3>Personal information</h3>
-                <ul>
-                    <li>
-                        <p><span class="bold">Gender: </span><?php echo $obj->gender; ?></p>
-                        <p class="hide" style="display: none;"><span class="bold">Gender: </span>—</p>
-                    </li>
-                    <li>
-<!--                        <p><span class="bold">Birthdate: </span>2011-11-11</p>-->
-                        <p><span class="bold">Birthdate: </span><?php echo $obj->birthdate; ?></p>
-                        <p class="hide" style="display: none;"><span class="bold">Birthdate: </span>—/—/— —</p>
-                    </li>
+    </div>
+    <div class="infoContainer">
+        <div class="stats">
+            <ul>
+                <!-- <li>
+                            <p>17 Lessons Competed</p>
+                        </li> -->
+                <li>
+                    <!-- <p><span class="bold">6</span> Favorites</p> -->
+                </li>
+                <li>
+                    <!--                        <p>Member Since <span class="bold">8 Months Ago</span></p>-->
+                    <p>Member Since <span class="bold"><?php echo $obj->created_at; ?></span></p>
+                </li>
+            </ul>
+        </div>
+        <div class="info">
+            <h3>Personal information</h3>
+            <ul>
+                <li>
+                    <p><span class="bold">Gender: </span><?php echo $obj->gender; ?></p>
+                    <p class="hide" style="display: none;"><span class="bold">Gender: </span>—</p>
+                </li>
+                <li>
+                    <!--                        <p><span class="bold">Birthdate: </span>2011-11-11</p>-->
+                    <p><span class="bold">Birthdate: </span><?php echo $obj->birthdate; ?></p>
+                    <p class="hide" style="display: none;"><span class="bold">Birthdate: </span>—/—/— —</p>
+                </li>
 
-                    <li>
-<!--                        <p><span class="bold">Location: </span>Madrid, Spain</p>-->
-                        <p><span class="bold">Location: </span><?php echo $obj->location; ?></p>
-                        <p class="hide" style="display: none;"><span class="bold">Location: </span>—</p>
-                    </li>
-                    <li>
-                        <p><span class="bold">Email: </span><?php echo $obj->email; ?></p>
-                        <p class="hide" style="display: none;"><span class="bold">Email: </span>—</p>
-                    </li>
-                    <li>
-<!--                        <p><span class="bold">Phone: </span>+1 (289) 830-1724</p>-->
-                        <p><span class="bold">Phone: </span><?php echo $obj->phone; ?></p>
-                        <p class="hide" style="display: none;"><span class="bold">Phone: </span>—</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="about">
-                <h3>About me</h3>
-                <textarea class="aboutContent" placeholder="Tell your classmates about yourself…"><?php echo $obj->about; ?></textarea>
-            </div>
+                <li>
+                    <!--                        <p><span class="bold">Location: </span>Madrid, Spain</p>-->
+                    <p><span class="bold">Location: </span><?php echo $obj->location; ?></p>
+                    <p class="hide" style="display: none;"><span class="bold">Location: </span>—</p>
+                </li>
+                <li>
+                    <p><span class="bold">Email: </span><?php echo $obj->email; ?></p>
+                    <p class="hide" style="display: none;"><span class="bold">Email: </span>—</p>
+                </li>
+                <li>
+                    <!--                        <p><span class="bold">Phone: </span>+1 (289) 830-1724</p>-->
+                    <p><span class="bold">Phone: </span><?php echo $obj->phone; ?></p>
+                    <p class="hide" style="display: none;"><span class="bold">Phone: </span>—</p>
+                </li>
+            </ul>
+        </div>
+        <div class="about">
+            <h3>About me</h3>
+            <textarea class="aboutContent"
+                      placeholder="Tell your classmates about yourself…"><?php echo $obj->about; ?></textarea>
+        </div>
+        <div class="favorites">
+
+
+            <?php
+            //        select favorite programs BEGINS
+            $queryFavoriteProgram = "SELECT DISTINCT programs.title, `favorite-programs`.program as favoriteId
+            FROM programs
+            JOIN `favorite-programs` ON programs.id = `favorite-programs`.program WHERE `favorite-programs`.user='$user'";
+            $resultFavoriteProgram = $conn->query($queryFavoriteProgram);
+            $rowsFavoriteProgram = $resultFavoriteProgram->num_rows;
+            if ($rowsFavoriteProgram) {
+                echo '
+                    <h3>My favorite programs</h3>
+                    <div class="favoritesList">
+                                <ul>';
+                for ($i = 0; $i < $rowsFavoriteProgram; ++$i) {
+                    $result->data_seek($i);
+                    $objFavoriteProgram = $resultFavoriteProgram->fetch_object();
+                    if ($objFavoriteProgram) {
+                        echo '<a href="program.php?id=' . $objFavoriteProgram->favoriteId . '&user=' . $user . '">
+                        <li>
+                            <p>' . $objFavoriteProgram->title . '</p>
+                            <i id="' . $objFavoriteProgram->favoriteId . '"class="fas fa-times"></i>
+                        </li>
+                    </a>';
+                    }
+                }
+                echo '            </ul>
+                    </div>';
+            }
+
+            //        select favorite programs ENDS
+            //        end
+            ?>
 
         </div>
-    </div>
+        <!--        <div class="favorites">-->
+        <!--            <h3>My favorite programs</h3>-->
+        <!--            <div class="favoritesList">-->
+        <!--                <ul>-->
+        <!--                    <a href="program.php?id=1&user=1">-->
+        <!--                        <li>-->
+        <!--                            <p>Power Yoga</p>-->
+        <!--                            <i class="fas fa-times"></i>-->
+        <!--                        </li>-->
+        <!--                    </a>-->
+        <!--                </ul>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-    <?php include_once '../parts/footer.php' ?>
-    <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    </div>
+</div>
+
+<?php include_once '../parts/footer.php' ?>
+
+<script
+        src="//code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="/assets/js/jquery.nicescroll.min.js"></script>
 
+<script src="../js/app.js"></script>
 </body>
 
 </html>

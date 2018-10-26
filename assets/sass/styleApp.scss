@@ -127,6 +127,7 @@ body {
                 position: sticky;
                 top: 100%;
                 text-align: right;
+                position: -webkit-sticky;
 
                 li {
                     height: 51px;
@@ -136,23 +137,14 @@ body {
                     display: inline-block;
                     box-shadow: 0 2px 4px #0000004d;
                     margin-right: 8px;
+                    text-align: center;
+                    overflow: hidden;
 
-                    img {
-                        height: 27px;
-                        position: relative;
-                        top: 50%;
-                        margin-top: -12px !important;
-                        margin: 0 auto;
-                        margin-top: 0px;
-                        margin-right: auto;
-                        margin-bottom: 0px;
-                        margin-left: auto;
-
-                        &:first-of-type {
-                            height: 29px;
-                            top: 50%;
-                            margin-top: -13px !important;
-                        }
+                    i {
+                        margin-top: 12px;
+                        font-size: 30px;
+                        color: $salmon;
+                        text-align: center;
                     }
                 }
             }
@@ -277,6 +269,7 @@ body {
         margin-top: 10px;
         margin-bottom: 0;
         width: 24%;
+
         p {
             margin-top: 5px;
         }
@@ -354,23 +347,14 @@ button {
                         display: inline-block;
                         box-shadow: 0 2px 4px #0000004d;
                         margin-right: 8px;
+                        text-align: center;
+                        overflow: hidden;
 
-                        img {
-                            height: 27px;
-                            position: relative;
-                            top: 50%;
-                            margin-top: -12px !important;
-                            margin: 0 auto;
-                            margin-top: 0px;
-                            margin-right: auto;
-                            margin-bottom: 0px;
-                            margin-left: auto;
-
-                            &:first-of-type {
-                                height: 29px;
-                                top: 50%;
-                                margin-top: -13px !important;
-                            }
+                        i {
+                            margin-top: 12px;
+                            font-size: 30px;
+                            color: $salmon;
+                            text-align: center;
                         }
                     }
                 }
@@ -723,6 +707,7 @@ button {
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 93px;
+
         .stats {
             margin-top: 25px;
             margin-bottom: 25px;
@@ -767,11 +752,7 @@ button {
             .aboutContent,
             p {
                 font-family: museo-sans, sans-serif;
-                background: #FBFBFC;
                 width: 303px;
-                // height: 92px;
-                border-radius: 5px;
-                border: 1px solid $light-gray;
                 margin: 0 auto;
                 font-size: 14px;
                 line-height: 20px;
@@ -779,6 +760,11 @@ button {
                 padding: 15px;
                 resize: none;
                 height: 92px;
+                background: #fbfbfc;
+                overflow-x: hidden;
+                border: 1px solid;
+                border-radius: 12px;
+                border-color: $light-gray;
             }
         }
 
@@ -794,7 +780,6 @@ button {
 
             .favoritesList {
                 width: inherit;
-                height: 196px;
                 background: #fbfbfc;
                 overflow-x: hidden;
                 border: 1px solid;
@@ -912,9 +897,11 @@ button {
             position: relative;
             top: -2px;
         }
-        a{
+
+        a {
             color: unset;
         }
+
         i {
             display: inline-block;
             font-size: 28px;
@@ -1001,6 +988,7 @@ button {
             margin-top: 10px;
             margin-bottom: 0;
             width: 24%;
+
             p {
                 margin-top: 5px;
             }
@@ -1051,9 +1039,11 @@ button {
             position: relative;
             top: -2px;
         }
-        a{
+
+        a {
             color: unset;
         }
+
         i {
             display: inline-block;
             font-size: 28px;
@@ -1229,6 +1219,7 @@ button {
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 93px;
+
         .stats {
             margin-top: 25px;
             margin-bottom: 45px;
@@ -1339,9 +1330,11 @@ button {
         width: 335px;
         background: #fff;
         margin: 0 auto;
-        a{
+
+        a {
             color: unset;
         }
+
         h3 {
             font-size: 22px;
             font-weight: 700;
@@ -1370,12 +1363,14 @@ button {
     }
 
     text-align: center;
-    .contactBlock{
+
+    .contactBlock {
         margin-bottom: 93px;
+
         a {
             color: unset;
             max-width: 192px;
-    
+
             &.btn {
                 border: 1px solid #000;
                 padding: 13px 0;
@@ -1383,72 +1378,72 @@ button {
                 display: block;
                 margin: 0 auto;
                 border-radius: 8px;
-    
+
                 p {
                     display: inline-block;
                 }
-    
+
                 i {
                     display: inline-block;
                     margin-right: 10px;
                     font-size: 20px;
                 }
-    
+
                 display: block;
             }
-    
+
             &.facebook {
                 display: block;
                 margin: 0 auto;
             }
-    
+
             &.instagram {
                 display: block;
                 margin-top: 35px;
                 margin: 35px auto 0 auto;
             }
-    
+
             &.message {
                 margin-top: 50px;
             }
-    
+
             &.call {
                 margin-top: 50px;
                 text-align: left;
-    
+
                 i {
                     margin-right: 39px;
                     margin-left: 17px;
                 }
             }
-    
+
             p {
-    
+
                 font-family: museo-sans, sans-serif;
-    
+
                 font-size: 18px;
                 font-weight: 700;
-    
+
                 &.fb {
                     color: #4267B2;
                     font-size: 16px;
                     margin-top: 15px;
                 }
-    
+
                 &.insta {
                     color: #D75057;
                     font-size: 16px;
                     margin-top: 15px;
                 }
             }
-    
+
             img {
                 height: 58px;
                 margin: 0 auto;
             }
         }
     }
-    
+
 
     .footerBar {
         background-color: #fff;
@@ -1516,9 +1511,11 @@ button {
             position: relative;
             top: -2px;
         }
-        a{
+
+        a {
             color: unset;
         }
+
         i {
             display: inline-block;
             font-size: 28px;
@@ -1766,6 +1763,7 @@ button {
 
             ul {
                 position: sticky;
+                position: -webkit-sticky;
                 top: 100%;
                 text-align: right;
 
@@ -1865,7 +1863,8 @@ button {
 
                 .notConfirmed {
                     margin-top: 10px;
-                    .nextText{
+
+                    .nextText {
                         color: $soft-gray;
                         margin-bottom: 10px;
                     }
@@ -1873,7 +1872,8 @@ button {
 
                 .сonfirmed {
                     margin-top: 10px;
-                    .nextText{
+
+                    .nextText {
                         padding-bottom: 15px;
                         border-bottom-width: 1px;
                         border-bottom-style: solid;
@@ -1881,7 +1881,7 @@ button {
                     }
                 }
 
-                
+
                 .or {
                     font-family: museo-sans, sans-serif;
                     color: $gray;
@@ -1981,7 +1981,7 @@ button {
                         padding-top: 15px;
                         border-top-width: 1px;
                         border-top-style: solid;
-                        border-color: $soft-gray;                       
+                        border-color: $soft-gray;
                         padding-bottom: 15px;
                         color: $soft-gray;
                     }
@@ -2066,9 +2066,11 @@ button {
             position: relative;
             top: -2px;
         }
-        a{
+
+        a {
             color: unset;
         }
+
         i {
             display: inline-block;
             font-size: 28px;
@@ -2085,7 +2087,7 @@ button {
     .form {
         width: 309px;
         margin: 0 auto 93px auto;
-        
+
         .label {
             font-size: 20px;
             font-weight: 500;
@@ -2218,9 +2220,11 @@ button {
             position: relative;
             top: -2px;
         }
-        a{
+
+        a {
             color: unset;
         }
+
         i {
             display: inline-block;
             font-size: 28px;
@@ -2283,6 +2287,7 @@ button {
             text-align: center;
             margin-top: 45px;
         }
+
         .cancel {
             width: 309px;
             height: 49px;

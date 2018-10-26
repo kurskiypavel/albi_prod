@@ -55,9 +55,9 @@ class programClass
         $this->conn->query($sql_add_favorite);
     }
 
-    public function deleteFromFavorites($id){
-        $sql_delete_video = "DELETE FROM `favorite-programs` WHERE program='$id'";
-        $this->conn->query($sql_delete_video);
+    public function deleteFromFavorites($user, $program){
+        $sql_delete_favorite = "DELETE FROM `favorite-programs` WHERE user='$user' and program='$program'";
+        $this->conn->query($sql_delete_favorite);
     }
 
 }
