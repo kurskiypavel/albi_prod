@@ -78,7 +78,7 @@ body {
     .eventLists {
         font-size: 16px;
         color: $gray;
-        width: 335px;
+        
         margin: 0 auto;
         font-family: museo-sans, sans-serif !important;
         text-align: center;
@@ -87,8 +87,7 @@ body {
             display: inline-block;
             padding-bottom: 10px;
             padding-top: 0px;
-            padding-left: 30px;
-            padding-right: 30px;
+            
 
             &:first-of-type {
                 margin-right: 7px;
@@ -2435,4 +2434,36 @@ button {
             }
         }
     }
+}
+
+
+
+// for 320 and smaller
+
+@media only screen and (max-width: 320px) {
+    .header {
+        .programLists, .videoLists, .eventLists {
+          width: 100%;
+        }
+        .programLists li, .videoLists li, .eventLists li {
+          padding-left: unset;
+          padding-right: unset;
+          width: 38% !important;
+          font-size: 0.9em !important;
+        }
+      }
+}
+
+// for 321 and bigger
+
+@media only screen and (min-width: 321px) {
+    .header {
+        .programLists, .videoLists, .eventLists {
+          width: 335px;
+        }
+        .programLists li, .videoLists li, .eventLists li {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
 }
