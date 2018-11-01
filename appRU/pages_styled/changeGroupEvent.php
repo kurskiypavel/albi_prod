@@ -67,7 +67,7 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Change booking</title>
+    <title>Изменение записи</title>
     <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/styleApp.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
@@ -121,18 +121,18 @@ if ($_POST) {
             }
             ?>
 
-            <h3>Change booking</h3>
+            <h3>Изменение записи</h3>
         </div>
 
 
 
         <form class='form' method="post">
-            <p class="label">Choose date</p><input class="gray"  name='date' type="date" placeholder="date" value="<?php echo $objEvent->date; ?>">
-            <p class="label">Choose time</p><input class="gray"  name='time' type="time" placeholder="time" value="<?php echo $objEvent->time; ?>">
-            <p class="label">Comment</p><textarea class=""  name='comment' type="text" value="<?php echo $objEvent->comment; ?>"><?php echo $objEvent->comment; ?></textarea>
+            <p class="label">Дата</p><input class="gray"  name='date' type="date" placeholder="date" value="<?php echo $objEvent->date; ?>">
+            <p class="label">Время</p><input class="gray"  name='time' type="time" placeholder="time" value="<?php echo $objEvent->time; ?>">
+            <p class="label">Комментарий</p><textarea class=""  name='comment' type="text" value="<?php echo $objEvent->comment; ?>"><?php echo $objEvent->comment; ?></textarea>
 
-            <input class="button" name="changeGroupEvent" type="submit" value="Change">
-            <input class="cancel" name="deleteGroupEvent" type="submit" value="Cancel booking">
+            <input class="button" name="changeGroupEvent" type="submit" value="Изменить">
+            <input class="cancel" name="deleteGroupEvent" type="submit" value="Отменить занятие">
             </br>
         </form>
         <?php include_once '../parts/footer.php'?>

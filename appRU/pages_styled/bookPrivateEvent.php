@@ -45,7 +45,7 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Book private lesson</title>
+    <title>Взять частный урок</title>
     <link href="https://cdn.jsdelivr.net/npm/flexiblegrid@v1.2.2/dist/css/flexible-grid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/styleApp.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
@@ -92,17 +92,17 @@ if ($_POST) {
     <div class="bookPrivateEventPage">
         <div class="header">
             <a href='instructor.php?user=<?php echo $user;?>&id=1'><i class="fas fa-arrow-left"></i></a>
-            <h3>Book private lesson</h3>
+            <h3>Взять частный урок</h3>
         </div>
 
 
         <form class='form' method="post">
-            <p class="label">Choose date</p><input name='date' class="gray" type="date">
-            <p class="label">Choose time</p><input name='time' class="gray" type="time">
-            <p class="label">Comment</p><textarea class="" name='comment' type="text"></textarea>
+            <p class="label">Дата</p><input name='date' class="gray" type="date">
+            <p class="label">Время</p><input name='time' class="gray" type="time">
+            <p class="label">Комментарий</p><textarea class="" name='comment' type="text"></textarea>
 
             <div class="repeatableDiv">
-                <p class="repeatableLabel">Make repeatable</p>
+                <p class="repeatableLabel">Повторные занятия</p>
                 <div class="repeatableCheckbox">
 
                     <input type='checkbox' class='ios8-switch' name="repeatable" id='checkbox-1'>
@@ -111,7 +111,7 @@ if ($_POST) {
                 </div>
             </div>
 
-            <input class="button" name="createPrivateEvent" type="submit" value="Book">
+            <input class="button" name="createPrivateEvent" type="submit" value="Готово">
 
         </form>
         <?php include_once '../parts/footer.php'?>

@@ -23,7 +23,7 @@ echo '
                     echo '<img style="width: 36px;margin: 0 auto;" src="../../assets/images/App/foot-grey.png" alt="" srcset="">';
                 }
                 echo '
-                    <p>Programs</p>
+                    <p>Программы</p>
                 </a>
             </li>
             <li class="'.($thisPage == 'contact instructor' ? 'active' : '').'">
@@ -35,13 +35,13 @@ echo '
             <li class="'.($thisPage == 'events' ? 'active' : '').'">
                 <a href="events.php?user='.$user.'">
                     <i class="far fa-calendar-alt"></i>
-                    <p>My events</p>
+                    <p>Мои занятия</p>
                 </a>
             </li>
             <li class="'.($thisPage == 'user' ? 'active' : '').'">
                 <a href="user.php?user='.$user.'">
                     <i class="fas fa-user"></i>
-                    <p>My profile</p>
+                    <p>Профиль</p>
                 </a>
             </li>
         </ul>
