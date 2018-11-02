@@ -156,9 +156,9 @@ $obj = $result->fetch_object();
                     $objFavoriteProgram = $resultFavoriteProgram->fetch_object();
                     if ($objFavoriteProgram) {
                         echo '<a href="program.php?id=' . $objFavoriteProgram->favoriteId . '&user=' . $user . '">
-                        <li>
-                            <p>' . $objFavoriteProgram->title . '</p>
-                            <i id="' . $objFavoriteProgram->favoriteId . '"class="fas fa-times"></i>
+                        <li class="row d-flex flex-d-row">
+                            <p class="column-10">' . $objFavoriteProgram->title . '</p>
+                            <div class="column-2" style="text-align: right;"><i id="' . $objFavoriteProgram->favoriteId . '"class="fas fa-times"></i></div>
                         </li>
                     </a>';
                     }

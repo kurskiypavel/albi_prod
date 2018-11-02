@@ -22,6 +22,15 @@ body {
     background: #EEEEEF;
 }
 
+a {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .column {
     padding-left: 0;
     padding-right: 0;
@@ -282,7 +291,7 @@ body {
         bottom: 0px;
         left: 0px;
         right: 0px;
-        height: 73px;
+        height: 61px;
         margin-bottom: 0px;
         text-align: center;
 
@@ -298,6 +307,11 @@ body {
             margin-bottom: 0;
             width: 24%;
 
+            img {
+                width: 30px;
+                margin: 0 auto;
+            }
+
             p {
                 margin-top: 5px;
             }
@@ -308,15 +322,15 @@ body {
 
 
             .fa-question {
-                font-size: 33px;
+                font-size: 30px;
             }
 
             .fa-calendar-alt {
-                font-size: 33px;
+                font-size: 30px;
             }
 
             .fa-user {
-                font-size: 33px;
+                font-size: 30px;
             }
         }
     }
@@ -331,15 +345,21 @@ body {
     .book {
         color: #fff;
         background: $gradient;
-        width: 261px;margin-left: auto;  margin-right: auto;height: 43px;
-        
+        width: 261px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 43px;
+
         border-radius: 8px;
         font-size: 16px;
     }
 
     .booked {
-        width: 261px;margin-left: auto;  margin-right: auto;height: 43px;
-        
+        width: 261px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 43px;
+
         border-radius: 8px;
         font-size: 16px;
         border: 1px solid $gray;
@@ -352,7 +372,7 @@ body {
     .single {
         .programItem {
             background: #fff;
-            margin-bottom: 73px;
+            margin-bottom: 61px;
 
             .program {
                 overflow: hidden;
@@ -434,9 +454,12 @@ body {
                                 .book {
                                     color: #fff;
                                     background: linear-gradient(to right, #F5A84B, #F85C97);
-                                    width: 261px;margin-left: auto;  margin-right: auto;height: 43px;
+                                    width: 261px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    height: 43px;
                                     margin: 0 auto;
-                                    
+
                                     border-radius: 8px;
                                     font-size: 16px;
                                 }
@@ -444,10 +467,13 @@ body {
                                 .booked {
                                     color: $soft-gray;
                                     background: #fff;
-                                    width: 261px;margin-left: auto;  margin-right: auto;height: 43px;
+                                    width: 261px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    height: 43px;
                                     border: 1px solid $gray;
                                     margin: 0 auto;
-                                    
+
                                     border-radius: 8px;
                                     font-size: 16px;
                                 }
@@ -551,7 +577,7 @@ body {
                             overflow: hidden;
 
                             .headerInstructor {
-                                height: 390px;
+                                height: 270px;
                                 background-size: cover;
                                 background-position: center;
                                 background-repeat: no-repeat;
@@ -640,7 +666,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -656,6 +682,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -665,19 +696,19 @@ body {
                 }
 
                 .fa-table {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-video {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -696,14 +727,14 @@ body {
             margin-bottom: 10px;
 
             h3 {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans500', sans-serif;
                 //font-weight: 700;
 
-                width: 286px;
+                width: 264px;
                 display: inline-block;
                 text-align: center;
-                padding-left: 28px;
+                padding-left: 51px;
             }
 
             i {
@@ -714,11 +745,11 @@ body {
         }
 
         .card {
-            max-height: 438px;
-            height: 438px;
+            max-height: 344px;
+            height: 344px;
 
             h3 {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans500', sans-serif;
                 //font-weight: 700;
                 padding-bottom: 20px;
@@ -734,7 +765,7 @@ body {
                 overflow: hidden;
 
                 .headerInstructor {
-                    height: 370px;
+                    height: 282px;
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -760,7 +791,7 @@ body {
                 li {
 
                     color: $dark-gray;
-                    font-size: 18px;
+                    font-size: 14px;
                     font-family: 'museoSans300', sans-serif;
                     font-weight: 300;
                     margin-top: 10px;
@@ -772,7 +803,7 @@ body {
                 margin-bottom: 45px;
 
                 h3 {
-                    font-size: 16px;
+                    font-size: 14px;
                     font-family: 'museoSans500', sans-serif;
                     //font-weight: 700;
                     margin-bottom: 20px;
@@ -781,7 +812,7 @@ body {
                 li {
 
                     color: $dark-gray;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-family: 'museoSans300', sans-serif;
                     font-weight: 300;
                     margin-top: 15px;
@@ -792,7 +823,7 @@ body {
                 margin-bottom: 45px;
 
                 h3 {
-                    font-size: 16px;
+                    font-size: 14px;
                     font-family: 'museoSans500', sans-serif;
                     //font-weight: 700;
                     margin-bottom: 20px;
@@ -801,7 +832,7 @@ body {
                 .aboutContent,
                 p {
 
-                    width: 286px;
+                    width: 272px;
                     margin: 0 auto;
                     font-size: 13px;
                     line-height: 20px;
@@ -819,11 +850,11 @@ body {
             }
 
             .favorites {
-                width: 311px;
+                width: 272px;
                 margin-bottom: 120px;
 
                 h3 {
-                    font-size: 16px;
+                    font-size: 14px;
                     font-family: 'museoSans500', sans-serif;
                     //font-weight: 700;
                     margin-bottom: 20px;
@@ -842,34 +873,38 @@ body {
                         padding: 10px;
 
                         li {
-
+                            position: relative;
                             background: $salmon;
-                            height: 38px;
+
                             border-radius: 8px;
                             border: 1px solid $light-gray;
                             line-height: 20px;
                             font-family: 'museoSans500', sans-serif;
                             font-weight: 500;
                             padding: 6px;
-                            display: inline-block;
+                            // display: inline-block;
                             color: #fff;
                             margin: 0 5px 8px 0;
+                            width: -moz-fit-content;
+                            width: -webkit-fit-content;
 
                             p,
                             i {
-                                display: inline-block;
+                                // display: inline-block;
                             }
 
                             p {
-                                font-size: 16px;
+                                font-size: 14px;
+
                             }
 
                             i {
-                                font-size: 20px;
+                                font-size: 16px;
                                 padding-right: 6px;
                                 padding-left: 6px;
-                                position: relative;
-                                top: 3px;
+
+
+
                             }
                         }
                     }
@@ -883,7 +918,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -900,6 +935,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -909,19 +949,19 @@ body {
                 }
 
                 .fa-table {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-video {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -936,7 +976,7 @@ body {
             border: unset;
             padding-top: 20px;
             margin-bottom: 10px;
-            width: 303px;
+            width: 286px;
             background: #fff;
             margin: 0 auto;
 
@@ -984,7 +1024,7 @@ body {
             height: 35px;
 
             h4 {
-                width: 303px;
+                width: 286px;
                 margin: 0 auto;
                 position: relative;
                 top: 10px;
@@ -995,7 +1035,7 @@ body {
 
         .settingsContent {
             &:last-of-type {
-                margin-bottom: 73px;
+                margin-bottom: 61px;
             }
 
             li {
@@ -1004,12 +1044,12 @@ body {
                 border: 1px solid $extra-light-gray;
 
                 .subContent {
-                    width: 303px;
+                    width: 286px;
                     background: #fff;
                     margin: 0 auto;
 
                     * {
-                        font-size: 16px;
+                        font-size: 14px;
                         color: $dark-gray;
                     }
 
@@ -1018,12 +1058,14 @@ body {
                         font-weight: 300;
                         float: right;
                         position: relative;
-                        left: -45px;
+                        left: 20px;
+
                     }
 
                     #what {
                         width: 160px;
                         letter-spacing: 12px;
+                        left: unset;
                     }
                 }
             }
@@ -1035,7 +1077,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -1053,6 +1095,11 @@ body {
                 margin-bottom: 0;
                 width: 24%;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -1062,19 +1109,19 @@ body {
                 }
 
                 .fa-table {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-video {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -1085,11 +1132,11 @@ body {
 
         .header {
             background: #fff;
-            height: 70px;
+            height: 60px;
             border: unset;
             padding-top: 20px;
             margin-bottom: 10px;
-            width: 303px;
+            width: 286px;
             background: #fff;
             margin: 0 auto;
 
@@ -1132,30 +1179,34 @@ body {
             margin: 0 auto 93px auto;
 
             .label {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 color: $gray;
                 text-align: center;
-                margin-top: 31px;
+                margin-top: 21px;
+
+                &:first-of-type {
+                    margin-top: 5px;
+                }
             }
 
             .gray {
-                width: 309px;
-                height: 49px;
+                width: 271px;
+                height: 40px;
                 background: $light-gray;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans300', sans-serif;
                 font-weight: 300;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 15px;
-                padding: 15px;
+                margin: 10px auto 0 auto;
+                padding: 11px;
             }
 
             textarea {
-                width: 309px;
-                height: 122px;
+                width: 271px;
+                height: 77px;
                 resize: none;
                 background: $light-gray;
                 font-size: 18px;
@@ -1163,20 +1214,20 @@ body {
                 font-weight: 300;
                 border-radius: 8px;
                 padding: 15px;
-                margin-top: 15px;
+                margin: 15px auto 0 auto;
             }
 
             .button {
-                width: 309px;
-                height: 49px;
+                width: 272px;
+                height: 41px;
                 border: 1px $gray solid;
                 background: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 45px;
+                margin: 25px auto 0 auto;
             }
         }
 
@@ -1186,7 +1237,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -1203,6 +1254,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -1214,11 +1270,11 @@ body {
 
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -1234,7 +1290,7 @@ body {
 
         .header {
             background: #fff;
-            height: 40px;
+            height: 26px;
             border: unset;
             margin-top: 20px;
             margin-bottom: 10px;
@@ -1258,8 +1314,8 @@ body {
         }
 
         .card {
-            max-height: 438px;
-            height: 438px;
+            max-height: 335px;
+            height: 335px;
 
             h3 {
                 font-size: 18px;
@@ -1278,7 +1334,7 @@ body {
                 overflow: hidden;
 
                 .headerInstructor {
-                    height: 370px;
+                    height: 283px;
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1298,13 +1354,13 @@ body {
             margin-bottom: 93px;
 
             .stats {
-                margin-top: 25px;
-                margin-bottom: 45px;
+                margin-top: 26px;
+                margin-bottom: 30px;
 
                 li {
 
                     color: $dark-gray;
-                    font-size: 18px;
+                    font-size: 14px;
                     font-family: 'museoSans300', sans-serif;
                     font-weight: 300;
                     margin-top: 10px;
@@ -1319,8 +1375,8 @@ body {
                 color: #fff;
                 background: linear-gradient(to right, #F5A84B, #F85C97);
                 border-radius: 8px;
-                font-size: 18px;
-                padding: 15px 62px;
+                font-size: 17px;
+                padding: 14px 48px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
             }
@@ -1399,6 +1455,11 @@ body {
 
         .footerBar {
             box-shadow: 3px 3px 10px #0000004d;
+
+            img {
+                width: 30px;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -1407,9 +1468,9 @@ body {
 
         .header {
             background: #fff;
-            height: 70px;
+            height: 60px;
             border: unset;
-            padding-top: 20px;
+            padding-top: 26px;
             margin-bottom: 10px;
             width: 303px;
             background: #fff;
@@ -1444,8 +1505,8 @@ body {
             font-family: 'museoSans300', sans-serif;
             font-weight: 300;
             font-style: italic;
-            margin-top: 35px;
-            margin-bottom: 35px;
+            margin-top: 28px;
+            margin-bottom: 28px;
         }
 
         text-align: center;
@@ -1455,12 +1516,12 @@ body {
 
             a {
                 color: unset;
-                max-width: 192px;
+                max-width: 183px;
 
                 &.btn {
                     border: 1px solid #000;
-                    padding: 12px 0;
-                    max-width: 192px;
+                    padding: 9px 0;
+                    max-width: 180px;
                     display: block;
                     margin: 0 auto;
                     border-radius: 8px;
@@ -1472,7 +1533,7 @@ body {
                     i {
                         display: inline-block;
                         margin-right: 10px;
-                        font-size: 20px;
+                        font-size: 16px;
                     }
 
                     display: block;
@@ -1490,42 +1551,39 @@ body {
                 }
 
                 &.message {
-                    margin-top: 50px;
+                    margin-top: 29px;
                 }
 
                 &.call {
-                    margin-top: 50px;
+                    margin-top: 36px;
                     text-align: left;
 
                     i {
-                        margin-right: 39px;
+                        margin-right: 19px;
                         margin-left: 17px;
                     }
                 }
 
                 p {
-
-
-
-                    font-size: 18px;
+                    font-size: 15px;
                     font-family: 'museoSans500', sans-serif;
                     //font-weight: 700;
 
                     &.fb {
                         color: #4267B2;
-                        font-size: 16px;
+                        font-size: 15px;
                         margin-top: 15px;
                     }
 
                     &.insta {
                         color: #D75057;
-                        font-size: 16px;
+                        font-size: 15px;
                         margin-top: 15px;
                     }
                 }
 
                 img {
-                    height: 58px;
+                    height: 40px;
                     margin: 0 auto;
                 }
             }
@@ -1538,7 +1596,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -1555,6 +1613,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -1565,11 +1628,11 @@ body {
 
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -1581,11 +1644,11 @@ body {
 
         .header {
             background: #fff;
-            height: 70px;
+            height: 60px;
             border: unset;
             padding-top: 20px;
             margin-bottom: 10px;
-            width: 303px;
+            width: 286px;
             background: #fff;
             margin: 0 auto;
 
@@ -1633,30 +1696,34 @@ body {
             margin: 0 auto 93px auto;
 
             .label {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 color: $gray;
                 text-align: center;
-                margin-top: 31px;
+                margin-top: 21px;
+
+                &:first-of-type {
+                    margin-top: 5px;
+                }
             }
 
             .gray {
-                width: 309px;
-                height: 49px;
+                width: 271px;
+                height: 40px;
                 background: $light-gray;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans300', sans-serif;
                 font-weight: 300;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 15px;
-                padding: 15px;
+                margin: 10px auto 0 auto;
+                padding: 11px;
             }
 
             textarea {
-                width: 309px;
-                height: 122px;
+                width: 271px;
+                height: 77px;
                 resize: none;
                 background: $light-gray;
                 font-size: 18px;
@@ -1664,32 +1731,29 @@ body {
                 font-weight: 300;
                 border-radius: 8px;
                 padding: 15px;
-                margin-top: 15px;
-                margin-bottom: 20px;
+                margin: 15px auto 0 auto;
             }
 
             .button {
-                width: 309px;
-                height: 49px;
+                width: 272px;
+                height: 41px;
                 border: 1px $gray solid;
                 background: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 45px;
+                margin: 5px auto 0 auto;
             }
-
-
         }
 
         .repeatableDiv {
             position: relative;
-
             overflow: hidden;
-
             height: 40px;
+            width: 271px;
+            margin: 16px auto 0 auto;
 
             .repeatableLabel {
                 display: inline-block;
@@ -1776,7 +1840,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -1793,6 +1857,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -1802,19 +1871,19 @@ body {
                 }
 
                 .fa-table {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-video {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -1830,8 +1899,8 @@ body {
             font-family: 'museoSans500', sans-serif;
             //font-weight: 700;
             text-align: center;
-            padding-top: 27px;
-            padding-bottom: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .eventLists {
@@ -1852,15 +1921,15 @@ body {
 
         .event {
 
-            width: 303px;
+            width: 286px;
             background: #fff;
             box-shadow: 3px 3px 25px #0000004d;
             border-radius: 15px;
             overflow: hidden;
-            margin-top: 25px;
+            margin: 25px auto 0 auto;
 
             .headerEvent {
-                height: 200px;
+                height: 150px;
                 width: 303px;
                 background-size: cover;
                 background-position: center;
@@ -1945,7 +2014,7 @@ body {
                         }
 
                         img {
-                            width: 18px;
+                            width: 14px;
                         }
 
                         p {
@@ -1960,14 +2029,15 @@ body {
 
                 .nextLesson {
                     margin-top: 15px;
-                    padding-bottom: 15px;
+                    // padding-bottom: 15px;
 
                     p {
-                        font-size: 14px;
+                        font-size: 13px;
                         font-family: 'museoSans300', sans-serif;
                         font-weight: 300;
                         color: #000;
                         text-align: center;
+                        margin-bottom: 11px;
                     }
 
                     .notConfirmed {
@@ -1979,7 +2049,7 @@ body {
                         }
                     }
 
-                    .Ñonfirmed {
+                    .confirmed {
                         margin-top: 10px;
 
                         .nextText {
@@ -2012,7 +2082,7 @@ body {
                     a {
 
                         color: $salmon;
-                        font-size: 16px;
+                        font-size: 14px;
                         font-family: 'museoSans500', sans-serif;
                         //font-weight: 700;
                         display: inline-block;
@@ -2036,19 +2106,19 @@ body {
         margin-bottom: 100px;
 
         .event {
-            width: 303px;
+            width: 286px;
             background: #fff;
             box-shadow: 3px 3px 25px #0000004d;
             border-radius: 15px;
             overflow: hidden;
-            margin-top: 25px;
+            margin: 25px auto 0 auto;
 
             .headerEvent {
-                width: 303px;
+                width: 286px;
 
                 img {
-                    width: 73px;
-                    margin: 25px auto 25px auto;
+                    width: 58px;
+                    margin: 15px auto 15px auto;
                 }
             }
 
@@ -2070,17 +2140,17 @@ body {
                 }
 
                 .nextLesson {
-                    margin-top: 15px;
-                    padding-bottom: 15px;
+                    margin-top: 12px;
+                    padding-bottom: 12px;
 
                     .confirmed {
 
                         .nextText {
-                            padding-bottom: 15px;
+                            padding-bottom: 5px;
                             padding-top: 15px;
                             border-top-width: 1px;
                             border-top-style: solid;
-                            border-bottom-width: 1px;
+                            // border-bottom-width: 1px;
                             border-bottom-style: solid;
                             border-color: $soft-gray;
                             color: #000;
@@ -2100,7 +2170,7 @@ body {
                     }
 
                     p {
-                        font-size: 14px;
+                        font-size: 13px;
                         font-family: 'museoSans300', sans-serif;
                         font-weight: 300;
                         text-align: center;
@@ -2114,34 +2184,35 @@ body {
                         font-family: 'museoSans300', sans-serif;
                         font-weight: 300;
                         font-style: italic;
-                        margin-top: 25px;
+                        margin-top: 20px;
 
                     }
 
                     .change {
-                        width: 261px;margin-left: auto;  margin-right: auto;height: 43px;
-                        
-                        
+                        width: 254px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        height: 41px;
                         border-radius: 8px;
-                        font-size: 16px;
+                        font-size: 15px;
                         border: 1px solid $gray;
                         font-family: 'museoSans300', sans-serif;
                         font-weight: 300;
                         color: $soft-gray;
                         background: #fff;
-                        margin-top: 27px;
+                        margin-top: 19px;
                         margin-bottom: 15px;
                     }
                 }
 
                 .contactInstructor {
                     text-align: center;
-                    margin-bottom: 25px;
+                    margin-bottom: 16px;
 
                     a {
 
                         color: $salmon;
-                        font-size: 16px;
+                        font-size: 15px;
                         font-family: 'museoSans500', sans-serif;
                         //font-weight: 700;
                         display: inline-block;
@@ -2165,11 +2236,11 @@ body {
 
         .header {
             background: #fff;
-            height: 70px;
+            height: 60px;
             border: unset;
             padding-top: 20px;
             margin-bottom: 10px;
-            width: 303px;
+            width: 286px;
             background: #fff;
             margin: 0 auto;
 
@@ -2213,30 +2284,34 @@ body {
             margin: 0 auto 93px auto;
 
             .label {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 color: $gray;
                 text-align: center;
-                margin-top: 31px;
+                margin-top: 21px;
+
+                &:first-of-type {
+                    margin-top: 5px;
+                }
             }
 
             .gray {
-                width: 309px;
-                height: 49px;
+                width: 271px;
+                height: 40px;
                 background: $light-gray;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans300', sans-serif;
                 font-weight: 300;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 15px;
-                padding: 15px;
+                margin: 10px auto 0 auto;
+                padding: 11px;
             }
 
             textarea {
-                width: 309px;
-                height: 122px;
+                width: 271px;
+                height: 77px;
                 resize: none;
                 background: $light-gray;
                 font-size: 18px;
@@ -2244,33 +2319,33 @@ body {
                 font-weight: 300;
                 border-radius: 8px;
                 padding: 15px;
-                margin-top: 15px;
+                margin: 15px auto 0 auto;
             }
 
             .button {
-                width: 309px;
-                height: 49px;
+                width: 272px;
+                height: 41px;
                 border: 1px $gray solid;
                 background: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 45px;
+                margin: 25px auto 0 auto;
             }
 
             .cancel {
-                width: 309px;
-                height: 49px;
+                width: 271px;
+                height: 41px;
                 border: 1px $gray solid;
                 background: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 font-family: 'museoSans300', sans-serif;
                 font-weight: 300;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 25px;
+                margin: 19px auto 0 auto;
                 color: $soft-gray;
             }
         }
@@ -2281,7 +2356,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -2298,6 +2373,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -2307,19 +2387,19 @@ body {
                 }
 
                 .fa-table {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-video {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -2332,11 +2412,11 @@ body {
 
         .header {
             background: #fff;
-            height: 70px;
+            height: 60px;
             border: unset;
             padding-top: 20px;
             margin-bottom: 10px;
-            width: 303px;
+            width: 286px;
             background: #fff;
             margin: 0 auto;
 
@@ -2384,30 +2464,34 @@ body {
             margin: 0 auto 93px auto;
 
             .label {
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 color: $gray;
                 text-align: center;
-                margin-top: 31px;
+                margin-top: 21px;
+
+                &:first-of-type {
+                    margin-top: 5px;
+                }
             }
 
             .gray {
-                width: 309px;
-                height: 49px;
+                width: 271px;
+                height: 40px;
                 background: $light-gray;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'museoSans300', sans-serif;
                 font-weight: 300;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 15px;
-                padding: 15px;
+                margin: 10px auto 0 auto;
+                padding: 11px;
             }
 
             textarea {
-                width: 309px;
-                height: 122px;
+                width: 271px;
+                height: 77px;
                 resize: none;
                 background: $light-gray;
                 font-size: 18px;
@@ -2415,34 +2499,33 @@ body {
                 font-weight: 300;
                 border-radius: 8px;
                 padding: 15px;
-                margin-top: 15px;
-                margin-bottom: 20px;
+                margin: 15px auto 0 auto;
             }
 
             .button {
-                width: 309px;
-                height: 49px;
+                width: 272px;
+                height: 41px;
                 border: 1px $gray solid;
                 background: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 font-family: 'museoSans500', sans-serif;
                 font-weight: 500;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 45px;
+                margin: 5px auto 0 auto;
             }
 
             .cancel {
-                width: 309px;
-                height: 49px;
+                width: 271px;
+                height: 41px;
                 border: 1px $gray solid;
                 background: #fff;
-                font-size: 18px;
+                font-size: 15px;
                 font-family: 'museoSans300', sans-serif;
                 font-weight: 300;
                 border-radius: 8px;
                 text-align: center;
-                margin-top: 25px;
+                margin: 19px auto 0 auto;
                 color: $soft-gray;
             }
 
@@ -2450,10 +2533,10 @@ body {
 
         .repeatableDiv {
             position: relative;
-
             overflow: hidden;
-
             height: 40px;
+            width: 271px;
+            margin: 16px auto 0 auto;
 
             .repeatableLabel {
                 display: inline-block;
@@ -2540,7 +2623,7 @@ body {
             bottom: 0px;
             left: 0px;
             right: 0px;
-            height: 73px;
+            height: 61px;
             margin-bottom: 0px;
             text-align: center;
             box-shadow: 3px 3px 10px #0000004d;
@@ -2557,6 +2640,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 30px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -2566,19 +2654,19 @@ body {
                 }
 
                 .fa-table {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-video {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-calendar-alt {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
 
                 .fa-user {
-                    font-size: 33px;
+                    font-size: 30px;
                 }
             }
         }
@@ -2875,6 +2963,11 @@ body {
             margin-top: 10px;
             margin-bottom: 0;
             width: 24%;
+
+            img {
+                width: 36px;
+                margin: 0 auto;
+            }
 
             p {
                 margin-top: 5px;
@@ -3234,6 +3327,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -3420,34 +3518,37 @@ body {
                         padding: 10px;
 
                         li {
-
+                            position: relative;
                             background: $salmon;
-                            height: 38px;
+
                             border-radius: 8px;
                             border: 1px solid $light-gray;
                             line-height: 20px;
                             font-family: 'museoSans500', sans-serif;
                             font-weight: 500;
                             padding: 6px;
-                            display: inline-block;
+                            //display: inline-block;
                             color: #fff;
                             margin: 0 5px 8px 0;
+                            width: -moz-fit-content;
+                            width: -webkit-fit-content;
 
                             p,
                             i {
-                                display: inline-block;
+                                //display: inline-block;
                             }
 
                             p {
                                 font-size: 16px;
+                                //width: 86%;
                             }
 
                             i {
                                 font-size: 20px;
                                 padding-right: 6px;
                                 padding-left: 6px;
-                                position: relative;
-                                top: 3px;
+
+
                             }
                         }
                     }
@@ -3477,6 +3578,11 @@ body {
                 // margin: 20px;
                 margin-top: 10px;
                 margin-bottom: 0;
+
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
 
                 p {
                     margin-top: 5px;
@@ -3631,6 +3737,11 @@ body {
                 margin-bottom: 0;
                 width: 24%;
 
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -3780,6 +3891,11 @@ body {
                 // margin: 20px;
                 margin-top: 10px;
                 margin-bottom: 0;
+
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
 
                 p {
                     margin-top: 5px;
@@ -3977,6 +4093,11 @@ body {
 
         .footerBar {
             box-shadow: 3px 3px 10px #0000004d;
+
+            img {
+                width: 36px;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -4132,6 +4253,11 @@ body {
 
                 margin-top: 10px;
                 margin-bottom: 0;
+
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
 
                 p {
                     margin-top: 5px;
@@ -4370,6 +4496,11 @@ body {
                 // margin: 20px;
                 margin-top: 10px;
                 margin-bottom: 0;
+
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
 
                 p {
                     margin-top: 5px;
@@ -4875,6 +5006,11 @@ body {
                 margin-top: 10px;
                 margin-bottom: 0;
 
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
+
                 p {
                     margin-top: 5px;
                 }
@@ -5133,6 +5269,11 @@ body {
                 // margin: 20px;
                 margin-top: 10px;
                 margin-bottom: 0;
+
+                img {
+                    width: 36px;
+                    margin: 0 auto;
+                }
 
                 p {
                     margin-top: 5px;

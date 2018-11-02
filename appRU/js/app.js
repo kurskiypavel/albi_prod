@@ -116,7 +116,10 @@ function like(user, id) {
     $.ajax({
         type: "POST",
         url: "../ajax/like.php",
-        data: {user: user, id: id}
+        data: {
+            user: user,
+            id: id
+        }
     });
 }
 
@@ -126,7 +129,10 @@ function dislike(user, id) {
     $.ajax({
         type: "POST",
         url: "../ajax/dislike.php",
-        data: {user: user, id: id}
+        data: {
+            user: user,
+            id: id
+        }
     });
 }
 
@@ -143,7 +149,7 @@ $('i.fa-heart').on("click", function (e) {
     var url = new URL(window.location.href);
     var user = url.searchParams.get("user");
 
-    if(url.searchParams.get("id")){
+    if (url.searchParams.get("id")) {
         var id = url.searchParams.get("id");
     } else {
         var id = $(this).attr('id');
@@ -167,11 +173,43 @@ $('i.fa-times').on("click", function (e) {
     var user = url.searchParams.get("user");
     var id = $(this).attr('id');
 
-    $(this).parent().remove();
+    $(this).parent().parent().remove();
     dislike(user, id);
 
 });
 
 /*
  *   PROGRAM & PROGRAMS & USER FAVORITES SCRIPT ENDS
+ */
+
+
+/*
+ *  CONTROL VISIBILITY OF NAVIGATOIN  SCRIPT BEGINS
+ */
+
+$(document).bind("mouseup touchmove", function (e) {
+    var onready = window.innerHeight;
+	var max = window.innerHeight;
+    $(window).resize(function () {
+        var resized = window.innerHeight;
+		if(resized>max){
+			max = resized;
+		}
+        if (resized < max) {
+            $('.footerBar').hide();
+        } else {
+            $('.footerBar').show();
+        }
+
+    })
+})
+
+// touch - OFF
+
+// scroll - ON
+
+
+
+/*
+ *  CONTROL VISIBILITY OF NAVIGATOIN  SCRIPT BEGINS
  */

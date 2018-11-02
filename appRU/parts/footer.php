@@ -18,9 +18,9 @@ echo '
             <li class="'.($thisPage == 'programs' ? 'active' : '').'">
                 <a href="programs.php?user='.$user.'">';
                 if($thisPage=='programs'){
-                    echo '<img style="width: 36px;margin: 0 auto;" src="../../assets/images/App/foot-sun.png" alt="" srcset="">';
+                    echo '<img  src="../../assets/images/App/foot-sun.png" alt="" srcset="">';
                 }else{
-                    echo '<img style="width: 36px;margin: 0 auto;" src="../../assets/images/App/foot-grey.png" alt="" srcset="">';
+                    echo '<img  src="../../assets/images/App/foot-grey.png" alt="" srcset="">';
                 }
                 echo '
                     <p>Программы</p>
